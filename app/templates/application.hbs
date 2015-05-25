@@ -1,11 +1,17 @@
-<h2 id="title">Welcome to Ember.js</h2>
 
-{{log model}}
-{{#each model as |entry|}}
-  <p>{{entry.title}}</p>
-  {{entry.featuredImage.title}}
-  <img src={{entry.featuredImage.url}} />
-{{/each}}
+<div class="container">
+  {{site-header}}
 
-{{outlet}}
+
+  {{outlet}}
+
+  {{site-footer}}
+
+  <ul>
+    {{#each model as |entry|}}
+      <li>{{entry.title}} | <code>{{entry.featuredImage.url}}</code></li>
+    {{/each}}
+  </ul>
+
+</div>
 

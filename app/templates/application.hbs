@@ -3,6 +3,8 @@
 {{log model}}
 {{#each model as |entry|}}
   <p>{{entry.title}}</p>
+  {{entry.featuredImage.title}}
+  <img src={{entry.featuredImage.url}} />
 {{/each}}
 
 {{outlet}}

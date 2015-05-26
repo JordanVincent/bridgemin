@@ -1,4 +1,11 @@
 @import "bootstrap";
 
+// Bootstrap fix
+.breadcrumb > li + li:before {
+  content: "/\00a0";
+}
+
+@import "components/bread-crumb.scss";
+
 body {
 }

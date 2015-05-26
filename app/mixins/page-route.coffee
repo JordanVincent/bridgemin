@@ -2,6 +2,10 @@
 
 PageRoute = Ember.Mixin.create
   templateName: 'page'
+  
+  setupController: (controller, model) ->
+    @_super(controller, model)
+    controller.set('route', this)
 
   beforeModel: ->
     promise = @store.find 'entry',

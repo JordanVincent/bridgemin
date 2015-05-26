@@ -5,8 +5,8 @@ contentful = config.contentful
 
 ApplicationRoute = Ember.Route.extend
   model: ->
-    # sections
-    @store.find('entry', {content_type: contentful.model.section}).then (sections) ->
+    @store.find('entry', {content_type: contentful.model.section})
+    .then (sections) ->
       sections.get('firstObject.pages').then (pages) ->
         sections
 

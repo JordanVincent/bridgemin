@@ -29,9 +29,12 @@
 <div class="row">
   <div class="col-sm-4">
     <div class="panel panel-default">
-      <div class="panel-body">
-        Events
-      </div>
+      <div class="panel-heading">Events</div>
+      <ul class="list-group">
+        {{#each events as |event|}}
+        <li class="list-group-item">{{event.title}}</li>
+        {{/each}}
+      </ul>
     </div>
   </div>
   <div class="col-sm-4">

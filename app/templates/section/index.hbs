@@ -1,2 +1,7 @@
-{{bread-crumb section=model}}
-{{page-content page=model}}
+<div id="section-index">
+  {{bread-crumb section=model}}
+  {{#if model.image}}
+    <div class="section-image" style="background-image: url({{model.image.url}});"></div>
+  {{/if}}
+  {{page-content page=model}}
+</div>

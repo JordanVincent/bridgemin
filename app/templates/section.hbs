@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-sm-4">
+    <ul class="list-group">
+      <li class="list-group-item">{{link-to model.title 'section' model}}</li>
+      {{#each model.pages as |page|}}
+        <li class="list-group-item">{{link-to page.title 'page' model page}}</li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="col-sm-8">
+    {{outlet}}
+  </div>
+</div>
+

@@ -36,8 +36,11 @@ ApplicationSerializer = DS.RESTSerializer.extend
         payloadKey = @keyForRelationship(key, relationship.kind, 'deserialize')
 
         return unless hash.hasOwnProperty(payloadKey)
-        hash[key] = hash[payloadKey].sys.id
 
-
+        if Array.isArray(hash[payloadKey])
+          hash[key] = hash[payloadKey].map (item) ->
+            item.sys.id
+        else
+          hash[key] = hash[payloadKey].sys.id
 
 `export default ApplicationSerializer;`

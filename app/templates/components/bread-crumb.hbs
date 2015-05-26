@@ -1,10 +1,7 @@
-
-{{#each breadcrumbs as |breadcrumb|}}
-  <li class="{{unless breadcrumb.isActive 'active'}}">
-    {{#if breadcrumb.isActive}}
-      {{breadcrumb.title}}
-    {{else}}
-      {{link-to breadcrumb.title breadcrumb.link}}
-    {{/if}}
-  </li>
-{{/each}}
+<ol class="breadcrumb">
+  <li>{{link-to 'Home' 'index'}}</li>
+  <li>{{link-to section.title 'section' section}}</li>
+  {{#if page}}
+    <li>{{link-to page.title 'page' section page}}</li>
+  {{/if}}
+</ol>

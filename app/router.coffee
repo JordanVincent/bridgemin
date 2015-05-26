@@ -14,4 +14,7 @@ Router.map ->
     @route 'newsletter'
     @route 'photoGallery'
 
+  @resource 'section', { path: '/sections/:slug' }, ->
+    @resource 'page', { path: 'pages/:page_slug' }
+
 `export default Router;`

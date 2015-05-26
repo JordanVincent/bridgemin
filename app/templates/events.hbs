@@ -1,4 +1,11 @@
 {{#each model as |event|}}
-<h2>{{event.title}}</h2>
-{{markdown-to-html markdown=event.body}}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{event.title}}</h3>
+    </div>
+    <div class="panel-body">
+      <p>{{moment event.date}}</p>
+      {{markdown-to-html markdown=event.body}}
+    </div>
+  </div>
 {{/each}}

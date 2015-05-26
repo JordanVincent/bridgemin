@@ -7,5 +7,6 @@ Entry = DS.Model.extend
   body: DS.attr()
   slug: DS.attr()
   customTemplate: DS.attr()
+  date: DS.attr('date')
 
 `export default Entry;`

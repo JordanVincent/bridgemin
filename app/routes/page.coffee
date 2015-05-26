@@ -15,4 +15,15 @@ PageRoute = Ember.Route.extend
     @_super(controller, model)
     controller.set('section', @modelFor('section'))
 
+  renderTemplate: ->
+    @_super()
+
+    customTemplate = @modelFor('page').get('customTemplate')
+    return unless customTemplate
+
+    @render customTemplate,
+      outlet: 'extra'
+      into: 'page'
+      controller: customTemplate
+
 `export default PageRoute;`

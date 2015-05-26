@@ -1,9 +1,12 @@
 `import Ember from "ember";`
+`import config from '../config/environment';`
+
+contentful = config.contentful
 
 ApplicationRoute = Ember.Route.extend
   model: ->
     # sections
-    @store.find('entry', {content_type:'3Cdf29xH5YmCcCOQEgiqGE'}).then (sections) ->
+    @store.find('entry', {content_type: contentful.model.section}).then (sections) ->
       sections.get('firstObject.pages').then (pages) ->
         sections
 

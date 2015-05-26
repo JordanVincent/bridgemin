@@ -1,7 +1,8 @@
 `import Ember from 'ember';`
 
 BreadCrumb = Ember.Component.extend
-  classNames: ['bread-crumb']
+  tagName: 'ol'
+  classNames: ['bread-crumb', 'breadcrumb']
 
   breadcrumbs: (->
     breadcrumbs = @get('route.routeName').split('.').map (item, index, names) ->

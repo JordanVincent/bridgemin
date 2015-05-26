@@ -9,5 +9,9 @@ Router.map ->
     @route 'getEquipment'
     @route 'giveEquipment'
     @route 'equipmentTypes'
+  @route 'newsAndEvents', ->
+    @route 'events'
+    @route 'newsletter'
+    @route 'photoGallery'
 
 `export default Router;`

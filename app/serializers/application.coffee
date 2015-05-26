@@ -26,6 +26,9 @@ ApplicationSerializer = DS.RESTSerializer.extend
     # Norm ID
     normalizedPayload.id = singlePayload.sys.id
 
+    # Norm ContentType
+    normalizedPayload.contentTypeId = singlePayload.sys.contentType.sys.id
+
     @_super(typeClass, normalizedPayload)
 
   normalizeRelationships: (typeClass, hash) ->

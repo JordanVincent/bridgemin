@@ -1,11 +1,11 @@
 `import Ember from "ember";`
-`import config from '../config/environment';`
-
-contentful = config.contentful
 
 ApplicationRoute = Ember.Route.extend
+  beforeModel: ->
+    @set 'fragmentsPromise', @store.find('entry', {content_type: @contentful.contentTypeFor('fragment')})
+
   model: ->
-    @store.find('entry', {content_type: contentful.model.section})
+    @store.find('entry', {content_type: @contentful.contentTypeFor('section')})
     .then (sections) ->
       sections.get('firstObject.pages').then (pages) ->
         sections
@@ -13,5 +13,6 @@ ApplicationRoute = Ember.Route.extend
   setupController: (controller, model) ->
     @_super(controller, model)
     controller.set('sections', model)
+    controller.set('fragments', @get('fragmentsPromise'))
 
 `export default ApplicationRoute;`

@@ -1,7 +1,4 @@
 `import Ember from "ember";`
-`import config from '../config/environment';`
-
-contentful = config.contentful
 
 PageRoute = Ember.Route.extend
   serialize: (model, params) ->
@@ -9,7 +6,7 @@ PageRoute = Ember.Route.extend
 
   model: (params) ->
     @store.find('entry',
-      content_type: contentful.model.page
+      content_type: @contentful.contentTypeFor('page')
       'fields.slug': params.page_slug
     ).then (pages) ->
       pages.get('firstObject')
@@ -36,7 +33,7 @@ PageRoute = Ember.Route.extend
 
     if customTemplate is 'events'
       @store.find('entry',
-        content_type: contentful.model.event
+        content_type: @contentful.contentTypeFor('event')
       )
 
 `export default PageRoute;`

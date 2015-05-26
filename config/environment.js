@@ -29,7 +29,8 @@ module.exports = function(environment) {
       model: {
         section: '3Cdf29xH5YmCcCOQEgiqGE',
         page: '3SWJKtyBoAc8s4m0iYuO64',
-        event: '7biTVxa9MciWC2m48WIuKO'
+        event: '7biTVxa9MciWC2m48WIuKO',
+        fragment: '9paU2Wen5eowMKSWCkAGS'
       }
     }
   };

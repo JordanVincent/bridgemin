@@ -21,9 +21,17 @@ PageRoute = Ember.Route.extend
     customTemplate = @modelFor('page').get('customTemplate')
     return unless customTemplate
 
+    @controllerFor(customTemplate).set('model', @modelForCustom(customTemplate))
     @render customTemplate,
       outlet: 'extra'
       into: 'page'
       controller: customTemplate
+
+  modelForCustom: (customTemplate) ->
+
+    if customTemplate is 'events'
+      @store.find('entry',
+        content_type:'7biTVxa9MciWC2m48WIuKO'
+      )
 
 `export default PageRoute;`

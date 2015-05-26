@@ -1,0 +1,4 @@
+{{#each model as |event|}}
+<h2>{{event.title}}</h2>
+{{markdown-to-html markdown=event.body}}
+{{/each}}

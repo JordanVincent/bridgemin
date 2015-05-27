@@ -15,4 +15,10 @@ ApplicationRoute = Ember.Route.extend
     controller.set('sections', model)
     controller.set('fragments', @get('fragmentsPromise'))
 
+  actions:
+    goTo: (route, model) ->
+      return false unless route in ['section','page']
+      return @transitionTo(route, model) if route is 'section'
+      @transitionTo(route, model.get('section'), model) if route is 'page'
+
 `export default ApplicationRoute;`

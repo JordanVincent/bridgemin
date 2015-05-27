@@ -28,7 +28,7 @@ module.exports = function(environment) {
       host: 'https://cdn.contentful.com',
       spaceId: 'uuo3xbr82a31',
       apiToken: '6ae1a33264be4718edafc309c3e071bd3fa4c890a0db6221197364438bbbd8bf',
-      model: {
+      models: {
         section: '3Cdf29xH5YmCcCOQEgiqGE',
         page: '3SWJKtyBoAc8s4m0iYuO64',
         event: '7biTVxa9MciWC2m48WIuKO',

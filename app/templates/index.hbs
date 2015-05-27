@@ -2,7 +2,7 @@
   <div class="jumbotron">
     <h1>{{homeHeroFragment.title}}</h1>
     {{markdown-to-html markdown=homeHeroFragment.body}}
-    <button class="btn btn-primary">{{homeHeroFragment.linkText}}</button>
+    {{view 'fragment-link' fragment=homeHeroFragment goTo="goTo"}}
   </div>
 
   <div class="row">
@@ -12,7 +12,7 @@
         <div class="panel-body">
           {{background-image image=homeBox1Fragment.image}}
           {{markdown-to-html markdown=homeBox1Fragment.body}}
-          <button class="btn btn-primary">{{homeBox1Fragment.linkText}}</button>
+          {{view 'fragment-link' fragment=homeBox1Fragment goTo="goTo"}}
         </div>
       </div>
     </div>
@@ -22,7 +22,7 @@
         <div class="panel-body">
           {{background-image image=homeBox2Fragment.image}}
           {{markdown-to-html markdown=homeBox2Fragment.body}}
-          <button class="btn btn-primary">{{homeBox2Fragment.linkText}}</button>
+          {{view 'fragment-link' fragment=homeBox2Fragment goTo="goTo"}}
         </div>
       </div>
     </div>
@@ -32,7 +32,7 @@
         <div class="panel-body">
           {{background-image image=homeBox3Fragment.image}}
           {{markdown-to-html markdown=homeBox3Fragment.body}}
-          <button class="btn btn-primary">{{homeBox3Fragment.linkText}}</button>
+          {{view 'fragment-link' fragment=homeBox3Fragment goTo="goTo"}}
         </div>
       </div>
     </div>

@@ -1,9 +1,16 @@
+$bridge-blue: rgb(65,105,177);
+$bridge-red: rgb(219,31,48);
+$bridge-yellow: rgb(252,180,46);
+
+$bridge-blue-trans: transparentize($bridge-blue, 1);
+$bridge-red-trans: transparentize($bridge-red, 1);
+$bridge-yellow-trans: transparentize($bridge-yellow, 1);
+
 // Bootstrap variables overrides
 $gray-lighter: #F3F3F3;
 $gray-dark: #323232;
-$brand-primary: #4169B1; // Blue
+$brand-primary: $bridge-blue;
 $panel-border-radius: 8px;
-
 
 @import "bootstrap";
 
@@ -32,7 +39,7 @@ $panel-border-radius: 8px;
   border-radius: 500px;
   border: 0;
   font-weight: bold;
-  padding: 10px 12px;
+  padding: 10px 20px;
 }
 
 .box {
@@ -49,8 +56,15 @@ $panel-border-radius: 8px;
     background-color: $gray-dark;
     color: white;
     font-weight: bold;
+    font-size: 1.3em;
     text-align: center;
-    padding: 20px;
+    padding: 15px 20px;
+  }
+  .panel-ribbon {
+    background-color: $gray-dark;
+    .ribbon {
+      height: 8px;
+    }
   }
   .panel-body {
     background-color: white;
@@ -61,6 +75,24 @@ $panel-border-radius: 8px;
     }
     .inner {
       padding: 20px;
+      .text {
+        font-size: 1.2em;
+      }
+      .btn {
+        margin-top: 20px;
+      }
     }
   }
+}
+
+&.ribbon-blue {
+  background: linear-gradient(to right, $bridge-blue-trans 0%, $bridge-blue 30%, $bridge-blue 70%, $bridge-blue-trans 100%);
+}
+
+&.ribbon-red {
+  background: linear-gradient(to right, $bridge-red-trans 0%, $bridge-red 30%, $bridge-red 70%, $bridge-red-trans 100%);
+}
+
+&.ribbon-yellow {
+  background: linear-gradient(to right, $bridge-yellow-trans 0%, $bridge-yellow 30%, $bridge-yellow 70%, $bridge-yellow-trans 100%);
 }

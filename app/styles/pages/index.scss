@@ -19,9 +19,27 @@
       vertical-align: bottom;
 
       h1 {
-        font-size: 1.5em;
+        font-size: 1.3em;
+        font-weight: bold;
         margin: 0 0 20px 0;
       }
+
+      .text {
+        font-size: 1.2em;
+      }
+
+      .btn {
+        margin-top: 20px;
+      }
     }
+  }
+
+  .head .ribbon {
+    height: 18px;
+    margin: 0 auto;
+
+    &:nth-child(1) { width: 90%; }
+    &:nth-child(2) { width: 85%; }
+    &:nth-child(3) { width: 80%; }
   }
 }

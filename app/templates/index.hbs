@@ -4,10 +4,15 @@
       {{#background-image image=homeBox1Fragment.image class="hero"}}
         <div class="inner">
           <h1>{{homeHeroFragment.title}}</h1>
-          {{markdown-to-html markdown=homeHeroFragment.body}}
+          {{markdown-to-html markdown=homeHeroFragment.body class="text"}}
           {{view 'fragment-link' fragment=homeHeroFragment goTo="goTo" class="center-block"}}
         </div>
       {{/background-image}}
+    </div>
+    <div class="ribbons">
+      <div class="ribbon ribbon-red"></div>
+      <div class="ribbon ribbon-yellow"></div>
+      <div class="ribbon ribbon-blue"></div>
     </div>
   </div>
 
@@ -17,10 +22,11 @@
         <div class="col-sm-4">
           <div class="panel panel-box">
             <div class="panel-heading">{{homeBox1Fragment.title}}</div>
+            <div class="panel-ribbon"><div class="ribbon ribbon-red"></div></div>
             <div class="panel-body">
               {{background-image image=homeBox1Fragment.image}}
               <div class="inner">
-                {{markdown-to-html markdown=homeBox1Fragment.body}}
+                {{markdown-to-html markdown=homeBox1Fragment.body class="text"}}
                 {{view 'fragment-link' fragment=homeBox1Fragment goTo="goTo" class="center-block"}}
               </div>
             </div>
@@ -29,10 +35,11 @@
         <div class="col-sm-4">
           <div class="panel panel-box">
             <div class="panel-heading">{{homeBox2Fragment.title}}</div>
+            <div class="panel-ribbon"><div class="ribbon ribbon-yellow"></div></div>
             <div class="panel-body">
               {{background-image image=homeBox2Fragment.image}}
               <div class="inner">
-                {{markdown-to-html markdown=homeBox2Fragment.body}}
+                {{markdown-to-html markdown=homeBox2Fragment.body class="text"}}
                 {{view 'fragment-link' fragment=homeBox2Fragment goTo="goTo" class="center-block"}}
               </div>
             </div>
@@ -41,10 +48,11 @@
         <div class="col-sm-4">
           <div class="panel panel-box">
             <div class="panel-heading">{{homeBox3Fragment.title}}</div>
+            <div class="panel-ribbon"><div class="ribbon ribbon-blue"></div></div>
             <div class="panel-body">
               {{background-image image=homeBox3Fragment.image}}
               <div class="inner">
-                {{markdown-to-html markdown=homeBox3Fragment.body}}
+                {{markdown-to-html markdown=homeBox3Fragment.body class="text"}}
                 {{view 'fragment-link' fragment=homeBox3Fragment goTo="goTo" class="center-block"}}
               </div>
             </div>
@@ -60,7 +68,7 @@
               {{background-image image=upcomingEvent.image}}
               <div class="inner">
                 <h4>{{upcomingEvent.title}}</h4>
-                {{markdown-to-html markdown=upcomingEvent.body}}
+                {{markdown-to-html markdown=upcomingEvent.body class="text"}}
               </div>
             </ul>
           </div>
@@ -72,7 +80,7 @@
               {{background-image image=friendMonthFragment.image}}
               <div class="inner">
                 <h4>{{friendMonthFragment.title}}</h4>
-                {{markdown-to-html markdown=friendMonthFragment.body}}
+                {{markdown-to-html markdown=friendMonthFragment.body class="text"}}
               </div>
             </div>
           </div>

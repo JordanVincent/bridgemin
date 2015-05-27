@@ -1,65 +1,88 @@
 <div id="index">
-  <div class="jumbotron">
-    <h1>{{homeHeroFragment.title}}</h1>
-    {{markdown-to-html markdown=homeHeroFragment.body}}
-    {{view 'fragment-link' fragment=homeHeroFragment goTo="goTo"}}
-  </div>
-
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="panel panel-default box">
-        <div class="panel-heading">{{homeBox1Fragment.title}}</div>
-        <div class="panel-body">
-          {{background-image image=homeBox1Fragment.image}}
-          {{markdown-to-html markdown=homeBox1Fragment.body}}
-          {{view 'fragment-link' fragment=homeBox1Fragment goTo="goTo"}}
+  <div class="head">
+    <div class="container">
+      {{#background-image image=homeBox1Fragment.image class="hero"}}
+        <div class="inner">
+          <h1>{{homeHeroFragment.title}}</h1>
+          {{markdown-to-html markdown=homeHeroFragment.body}}
+          {{view 'fragment-link' fragment=homeHeroFragment goTo="goTo" class="center-block"}}
         </div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="panel panel-default box">
-        <div class="panel-heading">{{homeBox2Fragment.title}}</div>
-        <div class="panel-body">
-          {{background-image image=homeBox2Fragment.image}}
-          {{markdown-to-html markdown=homeBox2Fragment.body}}
-          {{view 'fragment-link' fragment=homeBox2Fragment goTo="goTo"}}
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="panel panel-default box">
-        <div class="panel-heading">{{homeBox3Fragment.title}}</div>
-        <div class="panel-body">
-          {{background-image image=homeBox3Fragment.image}}
-          {{markdown-to-html markdown=homeBox3Fragment.body}}
-          {{view 'fragment-link' fragment=homeBox3Fragment goTo="goTo"}}
-        </div>
-      </div>
+      {{/background-image}}
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="panel panel-default">
-        <div class="panel-heading">Events</div>
-        <ul class="list-group">
-          {{#each events as |event|}}
-          <li class="list-group-item">{{event.title}}</li>
-          {{/each}}
-        </ul>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="panel panel-default">
-        <div class="panel-body">
-          Friend of the month
+  <div class="body">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="panel panel-box">
+            <div class="panel-heading">{{homeBox1Fragment.title}}</div>
+            <div class="panel-body">
+              {{background-image image=homeBox1Fragment.image}}
+              <div class="inner">
+                {{markdown-to-html markdown=homeBox1Fragment.body}}
+                {{view 'fragment-link' fragment=homeBox1Fragment goTo="goTo" class="center-block"}}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="panel panel-box">
+            <div class="panel-heading">{{homeBox2Fragment.title}}</div>
+            <div class="panel-body">
+              {{background-image image=homeBox2Fragment.image}}
+              <div class="inner">
+                {{markdown-to-html markdown=homeBox2Fragment.body}}
+                {{view 'fragment-link' fragment=homeBox2Fragment goTo="goTo" class="center-block"}}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="panel panel-box">
+            <div class="panel-heading">{{homeBox3Fragment.title}}</div>
+            <div class="panel-body">
+              {{background-image image=homeBox3Fragment.image}}
+              <div class="inner">
+                {{markdown-to-html markdown=homeBox3Fragment.body}}
+                {{view 'fragment-link' fragment=homeBox3Fragment goTo="goTo" class="center-block"}}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="panel panel-default">
-        <div class="panel-body">
-          Volunteer
+
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="panel panel-box">
+            <div class="panel-heading">Upcoming Event</div>
+            <ul class="panel-body">
+              {{background-image image=upcomingEvent.image}}
+              <div class="inner">
+                <h4>{{upcomingEvent.title}}</h4>
+                {{markdown-to-html markdown=upcomingEvent.body}}
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="panel panel-box">
+            <div class="panel-heading">Friend of the Month</div>
+            <div class="panel-body">
+              {{background-image image=friendMonthFragment.image}}
+              <div class="inner">
+                <h4>{{friendMonthFragment.title}}</h4>
+                {{markdown-to-html markdown=friendMonthFragment.body}}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="panel panel-box">
+            <div class="panel-body">
+              Volunteer
+            </div>
+          </div>
         </div>
       </div>
     </div>

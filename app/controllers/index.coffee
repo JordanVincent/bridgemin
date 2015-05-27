@@ -4,9 +4,6 @@ IndexController = Ember.Controller.extend
   needs: ['application']
   fragments: Ember.computed.alias("controllers.application.fragments")
 
-  # homeBox1Fragments: Ember.computed.filterBy('fragments', 'slug', 'home-box-1')
-  # homeBox1Fragment: Ember.computed.alias('homeBox1Fragments.firstObject')
-
   homeHeroFragment: Ember.computed 'fragments.[]',
     get: (name) -> @getFragment(name)
 
@@ -18,6 +15,11 @@ IndexController = Ember.Controller.extend
 
   homeBox3Fragment: Ember.computed 'fragments.[]',
     get: (name) -> @getFragment(name)
+
+  friendMonthFragment: Ember.computed 'fragments.[]',
+    get: (name) -> @getFragment(name)
+
+  upcomingEvent: Ember.computed.alias('fragments.firstObject')
 
   getFragment: (name) ->
     @get('fragments').findBy('slug', name.dasherize().replace('-fragment', ''))

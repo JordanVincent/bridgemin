@@ -2,6 +2,9 @@
 
 ApplicationController = Ember.Controller.extend
 
+  programSections: Ember.computed.filterBy('sections', 'isProgram', true)
+  otherSections: Ember.computed.filterBy('sections', 'isProgram', false)
+
   footerBox1Fragment: Ember.computed 'fragments.[]',
     get: (name) -> @getFragment(name)
 

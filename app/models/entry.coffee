@@ -14,6 +14,7 @@ Entry = Model.extend
 
   # sections
   pages: DS.hasMany('entry', {async: true, inverse: null})
+  isProgram: DS.attr()
 
   # pages
   section: DS.belongsTo('entry', {async: true, inverse: null})

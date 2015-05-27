@@ -1,0 +1,70 @@
+.site-header {
+  padding-top: 20px;
+
+  .bridge-logo {
+    width: 100%;
+  }
+
+  .top-nav, .bottom-nav {
+    .nav {
+      & > li {
+        padding: 10px 0;
+        &:last-child > a {
+          border-right: 0;
+        }
+        & > a {
+          color: white;
+          padding: 0 15px;
+          border-right: 1px solid rgba(255,255,255,.3);
+          border-radius: 0;
+          line-height: 1;
+          font-size: 1.2em;
+
+          &:hover {
+            background: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  .top-nav .nav {
+    display: inline-block;
+    padding: 10px;
+  }
+
+  .bottom-nav {
+    .nav {
+      padding-top: 10px;
+      & > li {
+        max-width: 130px;
+        text-align: center;
+        & > a {
+          font-weight: bold;
+        }
+      }
+    }
+    .nav-programs {
+      position: relative;
+
+      .programs-header {
+        position: absolute;
+        width: 100%;
+        top: -20px;
+
+        .programs-label {
+          text-align: center;
+          font-style: italic;
+          color: white;
+          font-size: 0.9em;
+          margin-bottom: 5px;
+        }
+
+        .ribbon {
+          height: 5px;
+          opacity: .3;
+        }
+      }
+    }
+  }
+}

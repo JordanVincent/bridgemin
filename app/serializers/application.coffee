@@ -44,6 +44,6 @@ ApplicationSerializer = DS.RESTSerializer.extend
           hash[key] = hash[payloadKey].map (item) ->
             item.sys.id
         else
-          hash[key] = hash[payloadKey].sys.id
+          hash[key] = hash[payloadKey]?.sys.id
 
 `export default ApplicationSerializer;`

@@ -1,17 +1,20 @@
 <div id="site-footer">
   <div class="container">
     <div class="raw clearfix">
-      <div class="col-sm-3">
-        <h3>Bridge Values</h3>
+      <div class="col-sm-4">
+        <h3>{{box1Fragment.title}}</h3>
+        <div class="ribbon"></div>
+        {{markdown-to-html markdown=box1Fragment.body class="text"}}
       </div>
-      <div class="col-sm-3">
-        <h3>Location & Hours</h3>
+      <div class="col-sm-4">
+        <h3>{{box2Fragment.title}}</h3>
+        <div class="ribbon"></div>
+        {{markdown-to-html markdown=box2Fragment.body class="text"}}
       </div>
-      <div class="col-sm-3">
-        <h3></h3>
-      </div>
-      <div class="col-sm-3">
-        <h3>Stay in Touch</h3>
+      <div class="col-sm-4">
+        <h3>{{box3Fragment.title}}</h3>
+        <div class="ribbon"></div>
+        {{markdown-to-html markdown=box3Fragment.body class="text"}}
       </div>
     </div>
   </div>

@@ -85,14 +85,17 @@ $panel-border-radius: 8px;
   }
 }
 
-&.ribbon-blue {
-  background: linear-gradient(to right, $bridge-blue-trans 0%, $bridge-blue 30%, $bridge-blue 70%, $bridge-blue-trans 100%);
-}
+.ribbon {
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, white 30%, white 70%, rgba(255,255,255,0) 100%);
+  &.ribbon-blue {
+    background: linear-gradient(to right, $bridge-blue-trans 0%, $bridge-blue 30%, $bridge-blue 70%, $bridge-blue-trans 100%);
+  }
 
-&.ribbon-red {
-  background: linear-gradient(to right, $bridge-red-trans 0%, $bridge-red 30%, $bridge-red 70%, $bridge-red-trans 100%);
-}
+  &.ribbon-red {
+    background: linear-gradient(to right, $bridge-red-trans 0%, $bridge-red 30%, $bridge-red 70%, $bridge-red-trans 100%);
+  }
 
-&.ribbon-yellow {
-  background: linear-gradient(to right, $bridge-yellow-trans 0%, $bridge-yellow 30%, $bridge-yellow 70%, $bridge-yellow-trans 100%);
+  &.ribbon-yellow {
+    background: linear-gradient(to right, $bridge-yellow-trans 0%, $bridge-yellow 30%, $bridge-yellow 70%, $bridge-yellow-trans 100%);
+  }
 }

@@ -1,7 +1,7 @@
 `import DS from "ember-data";`
+`import Model from "./model";`
 
-Asset = DS.Model.extend
-  contentTypeId: DS.attr()
+Asset = Model.extend
   title: DS.attr()
   url: DS.attr()
 

@@ -19,7 +19,9 @@ module.exports = function(environment) {
     },
 
     contentSecurityPolicy: {
-      'connect-src': "'self' cdn.contentful.com"
+      'connect-src': "'self' cdn.contentful.com",
+      'img-src': "'self' images.contentful.com",
+      'style-src': "'self' 'unsafe-inline'"
     },
 
     contentful: {

@@ -1,55 +1,66 @@
-<div class="jumbotron">
-  <h1>Homepage</h1>
-</div>
+<div id="index">
+  <div class="jumbotron">
+    <h1>{{homeHeroFragment.title}}</h1>
+    {{markdown-to-html markdown=homeHeroFragment.body}}
+    <button class="btn btn-primary">{{homeHeroFragment.linkText}}</button>
+  </div>
 
-<div class="row">
-  <div class="col-sm-4">
-    <div class="panel panel-default">
-      <div class="panel-heading">{{homeBox1Fragment.title}}</div>
-      <div class="panel-body">
-        {{markdown-to-html markdown=homeBox1Fragment.body}}
-        <button class="btn btn-primary">{{homeBox1Fragment.linkText}}</button>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-default box">
+        <div class="panel-heading">{{homeBox1Fragment.title}}</div>
+        <div class="panel-body">
+          {{background-image image=homeBox1Fragment.image}}
+          {{markdown-to-html markdown=homeBox1Fragment.body}}
+          <button class="btn btn-primary">{{homeBox1Fragment.linkText}}</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="panel panel-default box">
+        <div class="panel-heading">{{homeBox2Fragment.title}}</div>
+        <div class="panel-body">
+          {{background-image image=homeBox2Fragment.image}}
+          {{markdown-to-html markdown=homeBox2Fragment.body}}
+          <button class="btn btn-primary">{{homeBox2Fragment.linkText}}</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="panel panel-default box">
+        <div class="panel-heading">{{homeBox3Fragment.title}}</div>
+        <div class="panel-body">
+          {{background-image image=homeBox3Fragment.image}}
+          {{markdown-to-html markdown=homeBox3Fragment.body}}
+          <button class="btn btn-primary">{{homeBox3Fragment.linkText}}</button>
+        </div>
       </div>
     </div>
   </div>
-  <div class="col-sm-4">
-    <div class="panel panel-default">
-      <div class="panel-body">
-        Spiritual Care
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-4">
-    <div class="panel panel-default">
-      <div class="panel-body">
-        Guardianship
-      </div>
-    </div>
-  </div>
-</div>
 
-<div class="row">
-  <div class="col-sm-4">
-    <div class="panel panel-default">
-      <div class="panel-heading">Events</div>
-      <ul class="list-group">
-        {{#each events as |event|}}
-        <li class="list-group-item">{{event.title}}</li>
-        {{/each}}
-      </ul>
-    </div>
-  </div>
-  <div class="col-sm-4">
-    <div class="panel panel-default">
-      <div class="panel-body">
-        Friend of the month
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">Events</div>
+        <ul class="list-group">
+          {{#each events as |event|}}
+          <li class="list-group-item">{{event.title}}</li>
+          {{/each}}
+        </ul>
       </div>
     </div>
-  </div>
-  <div class="col-sm-4">
-    <div class="panel panel-default">
-      <div class="panel-body">
-        Volunteer
+    <div class="col-sm-4">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          Friend of the month
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          Volunteer
+        </div>
       </div>
     </div>
   </div>

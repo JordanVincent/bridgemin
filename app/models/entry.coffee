@@ -1,7 +1,7 @@
 `import DS from "ember-data";`
+`import Model from "./model";`
 
-Entry = DS.Model.extend
-  contentTypeId: DS.attr()
+Entry = Model.extend
 
   image: DS.belongsTo('asset', {async: true})
   pages: DS.hasMany('entry', {async: true, inverse: null})

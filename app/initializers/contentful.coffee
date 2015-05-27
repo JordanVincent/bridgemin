@@ -6,7 +6,8 @@ initializer = (container, application) ->
       config.contentful.model[model]
 
   application.register('contentful:main', contentful, {instantiate: false, singleton: true})
-  application.inject('route', 'contentful', 'contentful:main');
+  application.inject('route', 'contentful', 'contentful:main')
+  application.inject('controller', 'contentful', 'contentful:main')
 
 
 `export default {

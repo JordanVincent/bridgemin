@@ -5,8 +5,17 @@
   content: "/\00a0";
 }
 
+@import "components/background-image";
 @import "components/site-footer";
+
+@import "pages/index";
 @import "pages/section-index";
 
 body {
+}
+
+.box {
+  .background-image {
+    height: 100px;
+  }
 }

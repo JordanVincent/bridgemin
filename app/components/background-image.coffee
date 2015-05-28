@@ -4,7 +4,7 @@ BackgroundImage = Ember.Component.extend
   classNames: ['background-image']
   attributeBindings: ['style']
 
-  style: Ember.computed 'image.url',
+  style: Ember.computed 'image', 'image.url',
     get: ->
       "background-image: url(#{@get('image.url')});".htmlSafe()
 

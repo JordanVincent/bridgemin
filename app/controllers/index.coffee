@@ -19,7 +19,7 @@ IndexController = Ember.Controller.extend
   friendMonthFragment: Ember.computed 'fragments.[]',
     get: (name) -> @getFragment(name)
 
-  upcomingEvent: Ember.computed.alias('fragments.firstObject')
+  upcomingEvent: Ember.computed.alias('events.firstObject')
 
   getFragment: (name) ->
     @get('fragments').findBy('slug', name.dasherize().replace('-fragment', ''))

@@ -58,7 +58,19 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.baseURL = '/redesign'
+    ENV.baseURL = '/redesign';
+
+    ENV.contentful = {
+      host: 'https://cdn.contentful.com',
+      spaceId: 'aau1la373lje',
+      apiToken: 'c8926c7fd57915ef72717f61993f2336777e27db10d1b7f75f96369174938b8a',
+      models: {
+        section: '52nbs0fDkcc2aCUAUkCAIC',
+        page: '3QYmCl09M4I6oOG20Kk6KY',
+        event: '7uJh6WNWBG2UEYqoqO6wmM',
+        fragment: '1AbspHBo6Mmm06soSWSQY0'
+      }
+    };
   }
 
   return ENV;

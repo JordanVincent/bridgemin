@@ -6,9 +6,6 @@ ApplicationRoute = Ember.Route.extend
 
   model: ->
     @store.find('entry', {content_type: @contentful.contentTypeFor('section')})
-    .then (sections) ->
-      sections.get('firstObject.pages').then (pages) ->
-        sections
 
   setupController: (controller, model) ->
     @_super(controller, model)

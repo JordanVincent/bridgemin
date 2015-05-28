@@ -3,7 +3,7 @@
 
 Entry = Model.extend
 
-  image: DS.belongsTo('asset', {async: true})
+  image: DS.belongsTo('asset')
   title: DS.attr()
   body: DS.attr()
   slug: DS.attr()

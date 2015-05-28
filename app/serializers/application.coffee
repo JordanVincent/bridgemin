@@ -16,6 +16,10 @@ ApplicationSerializer = DS.RESTSerializer.extend
 
     normalizedPayload[primaryTypeClassName] = rawPayload.items
 
+    if rawPayload.includes
+      normalizedPayload['asset']  = rawPayload.includes.Asset if rawPayload.includes.Asset
+      normalizedPayload['_entry'] = rawPayload.includes.Entry if rawPayload.includes.Entry
+
     @_super(store, primaryTypeClass, normalizedPayload)
 
   normalize: (typeClass, singlePayload) ->

@@ -17,6 +17,10 @@ Entry = Model.extend
   icon: DS.belongsTo('asset')
   isProgram: DS.attr()
   description: DS.attr()
+  titleBreak: Ember.computed 'title',
+    get: ->
+      return unless @get('title')
+      @get('title').replace(' ','<br>')
 
   # pages
   section: DS.belongsTo('entry', {async: true, inverse: null})

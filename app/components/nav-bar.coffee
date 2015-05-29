@@ -1,6 +1,6 @@
 `import Ember from "ember";`
 
-NavBarImage = Ember.Component.extend
+NavBar = Ember.Component.extend
   tagName: 'nav'
   classNames: ['nav-bar','navbar', 'navbar-default']
 
@@ -11,4 +11,4 @@ NavBarImage = Ember.Component.extend
       $(@).removeClass('open')
   ).on('didInsertElement')
 
-`export default NavBarImage;`
+`export default NavBar;`

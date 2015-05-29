@@ -1,21 +1,19 @@
-<div class="site-header head">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-2">
-        {{#link-to 'index' }}
-          <img src="assets/images/bridge-logo.png" class="bridge-logo"/>
-        {{/link-to}}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-2">
+      {{#link-to 'index' }}
+        <img src="assets/images/bridge-logo.png" class="bridge-logo"/>
+      {{/link-to}}
+    </div>
+    <div class="col-sm-10">
+      <div class="top-nav clearfix">
+        <button class="btn btn-warning navbar-btn pull-right">Donate</button>
+        <ul class="nav nav-pills pull-right">
+          <li><a href="#">Directions</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
       </div>
-      <div class="col-sm-10">
-        <div class="top-nav clearfix">
-          <button class="btn btn-warning navbar-btn pull-right">Donate</button>
-          <ul class="nav nav-pills pull-right">
-            <li><a href="#">Directions</a></li>
-            <li><a href="#">Contact Us</a></li>
-          </ul>
-        </div>
-        {{nav-bar programSections=programSections otherSections=otherSections class="bottom-nav"}}
-      </div>
+      {{nav-bar programSections=programSections otherSections=otherSections class="bottom-nav"}}
     </div>
   </div>
 </div>

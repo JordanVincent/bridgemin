@@ -18,7 +18,7 @@
       </div>
       {{#each programSections as |section|}}
         <li class="dropdown">
-          {{link-to section.title 'section' section}}
+          {{#link-to 'section' section}}{{{section.titleBreak}}}{{/link-to}}
           <div class="dropdown-menu" role="menu">
             <div class="inner">
               <div class="main">
@@ -39,7 +39,7 @@
     <ul class="nav navbar-nav navbar-right">
       {{#each otherSections as |section|}}
         <li class="dropdown">
-          {{link-to section.title 'section' section}}
+          {{#link-to 'section' section}}{{{section.titleBreak}}}{{/link-to}}
           <div class="dropdown-menu" role="menu">
             <ul class="inner">
             {{#each section.pages as |page|}}

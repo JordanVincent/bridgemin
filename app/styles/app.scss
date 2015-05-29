@@ -51,6 +51,11 @@ $dropdown-link-color: white;
 @import "pages/index";
 @import "pages/section-index";
 
+body {
+  padding-top: 156px;
+  background-color: #171A1F;
+}
+
 .body {
   background-color: $gray-lighter;
   padding: 50px 0;

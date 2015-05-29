@@ -5,6 +5,10 @@ ApplicationController = Ember.Controller.extend
   programSections: Ember.computed.filterBy('sections', 'isProgram', true)
   otherSections: Ember.computed.filterBy('sections', 'isProgram', false)
 
+  sectionsSorting: ['position']
+  sortedProgramSections: Ember.computed.sort('programSections', 'sectionsSorting')
+  sortedOtherSections: Ember.computed.sort('otherSections', 'sectionsSorting')
+
   footerBox1Fragment: Ember.computed 'fragments.[]',
     get: (name) -> @getFragment(name)
 

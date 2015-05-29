@@ -6,7 +6,8 @@ ApplicationRoute = Ember.Route.extend
       content_type: @contentful.contentTypeFor('fragment')
 
   model: ->
-    @store.find('entry', {content_type: @contentful.contentTypeFor('section')})
+    @store.find 'entry',
+      content_type: @contentful.contentTypeFor('section')
 
   setupController: (controller, model) ->
     @_super(controller, model)

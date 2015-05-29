@@ -14,6 +14,7 @@ Entry = Model.extend
 
   # sections
   pages: DS.hasMany('entry', {async: true, inverse: null})
+  position: DS.attr()
   icon: DS.belongsTo('asset')
   isProgram: DS.attr()
   description: DS.attr()

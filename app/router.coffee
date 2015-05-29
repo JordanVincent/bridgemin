@@ -5,7 +5,7 @@ Router = Ember.Router.extend
   location: config.locationType
 
 Router.map ->
-  @resource 'section', { path: '/sections/:slug' }, ->
-    @resource 'page', { path: 'pages/:page_slug' }
+  @resource 'section', { path: '/:slug' }, ->
+    @resource 'page', { path: ':page_slug' }
 
 `export default Router;`

@@ -5,11 +5,14 @@ PageRoute = Ember.Route.extend
     { page_slug: model.get('slug')}
 
   model: (params) ->
-    @store.find('entry',
-      content_type: @contentful.contentTypeFor('page')
-      'fields.slug': params.page_slug
-    ).then (pages) ->
-      pages.get('firstObject')
+    new Ember.RSVP.Promise (resolve, reject) =>
+      @store.find('entry',
+        content_type: @contentful.contentTypeFor('page')
+        'fields.slug': params.page_slug
+      ).then (pages) ->
+        if pages.get('length')
+          resolve pages.get('firstObject')
+        else reject()
 
   setupController: (controller, model) ->
     @_super(controller, model)
@@ -30,7 +33,6 @@ PageRoute = Ember.Route.extend
       controller: customTemplate
 
   modelForCustom: (customTemplate) ->
-
     if customTemplate is 'events'
       @store.find('entry',
         content_type: @contentful.contentTypeFor('event')

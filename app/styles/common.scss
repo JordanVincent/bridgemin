@@ -1,0 +1,77 @@
+body {
+  padding-top: 156px;
+  background-color: #171A1F;
+}
+
+.body {
+  background-color: $gray-lighter;
+  padding: 50px 0;
+}
+
+.head {
+  background-color: #171A1F;
+}
+
+// Bootstrap overrides
+.btn {
+  border-radius: 500px;
+  border: 0;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.panel-box {
+  border: 0;
+  margin-bottom: 50px;
+
+  .panel-heading {
+    background-color: $gray-dark;
+    color: white;
+    font-weight: bold;
+    font-size: 1.3em;
+    text-align: center;
+    padding: 15px 20px;
+  }
+  .panel-ribbon {
+    background-color: $gray-dark;
+    .ribbon {
+      height: 8px;
+    }
+  }
+  .panel-body {
+    background-color: white;
+    padding: 0;
+    border-radius: $panel-border-radius;
+    .background-image {
+      height: 200px;
+    }
+    .inner {
+      padding: 20px;
+      .text {
+        font-size: 1.2em;
+      }
+      .btn {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &.panel-box-inverse {
+    color: white;
+    .panel-body {
+      background-color: $gray-dark;
+    }
+  }
+}
+
+.ribbon {
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, white 30%, white 70%, rgba(255,255,255,0) 100%);
+  &.ribbon-blue { @include ribbon-blue(); }
+  &.ribbon-red { @include ribbon-red(); }
+  &.ribbon-yellow { @include ribbon-yellow(); }
+}
+
+// Bootstrap fix
+.breadcrumb > li + li:before {
+  content: "/\00a0";
+}

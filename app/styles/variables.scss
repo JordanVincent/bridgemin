@@ -1,0 +1,26 @@
+$bridge-blue: rgb(65,105,177);
+$bridge-red: rgb(219,31,48);
+$bridge-yellow: rgb(252,180,46);
+
+$bridge-blue-trans: transparentize($bridge-blue, 1);
+$bridge-red-trans: transparentize($bridge-red, 1);
+$bridge-yellow-trans: transparentize($bridge-yellow, 1);
+
+// Bootstrap variables overrides
+$grid-gutter-width: 20px;
+$container-lg: (940px + $grid-gutter-width);
+
+$gray-light: #E4E4E4;
+$gray-lighter: #F3F3F3;
+$gray-dark: #323232;
+
+$brand-primary: $bridge-blue;
+$brand-warning: $bridge-yellow;
+$btn-warning-color: #333;
+
+$panel-border-radius: 8px;
+$navbar-default-bg: transparent;
+$navbar-default-link-color: white;
+$navbar-default-link-hover-color: white;
+$dropdown-bg: #323232;
+$dropdown-link-color: white;

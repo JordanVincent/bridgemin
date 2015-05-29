@@ -1,48 +1,7 @@
-$bridge-blue: rgb(65,105,177);
-$bridge-red: rgb(219,31,48);
-$bridge-yellow: rgb(252,180,46);
-
-$bridge-blue-trans: transparentize($bridge-blue, 1);
-$bridge-red-trans: transparentize($bridge-red, 1);
-$bridge-yellow-trans: transparentize($bridge-yellow, 1);
-
-// Bootstrap variables overrides
-$grid-gutter-width: 20px;
-$container-lg: (940px + $grid-gutter-width);
-
-$gray-light: #E4E4E4;
-$gray-lighter: #F3F3F3;
-$gray-dark: #323232;
-
-$brand-primary: $bridge-blue;
-$brand-warning: $bridge-yellow;
-$btn-warning-color: #333;
-
-$panel-border-radius: 8px;
-$navbar-default-bg: transparent;
-$navbar-default-link-color: white;
-$navbar-default-link-hover-color: white;
-$dropdown-bg: #323232;
-$dropdown-link-color: white;
-
-@mixin ribbon-red(){
-  background: linear-gradient(to right, $bridge-red-trans 0%, $bridge-red 30%, $bridge-red 70%, $bridge-red-trans 100%);
-}
-
-@mixin ribbon-yellow(){
-  background: linear-gradient(to right, $bridge-yellow-trans 0%, $bridge-yellow 30%, $bridge-yellow 70%, $bridge-yellow-trans 100%);
-}
-
-@mixin ribbon-blue(){
-  background: linear-gradient(to right, $bridge-blue-trans 0%, $bridge-blue 30%, $bridge-blue 70%, $bridge-blue-trans 100%);
-}
-
+@import "variables";
+@import "mixins";
 @import "bootstrap";
-
-// Bootstrap fix
-.breadcrumb > li + li:before {
-  content: "/\00a0";
-}
+@import "common";
 
 @import "components/background-image";
 @import "components/nav-bar";
@@ -50,76 +9,6 @@ $dropdown-link-color: white;
 @import "components/site-footer";
 
 @import "pages/index";
+@import "pages/section";
 @import "pages/section-index";
 
-body {
-  padding-top: 156px;
-  background-color: #171A1F;
-}
-
-.body {
-  background-color: $gray-lighter;
-  padding: 50px 0;
-}
-
-.head {
-  background-color: #171A1F;
-}
-
-// Bootstrap overrides
-.btn {
-  border-radius: 500px;
-  border: 0;
-  font-weight: bold;
-  padding: 10px 20px;
-}
-
-.box {
-  .background-image {
-    height: 100px;
-  }
-}
-
-.panel-box {
-  border: 0;
-  margin-bottom: 50px;
-
-  .panel-heading {
-    background-color: $gray-dark;
-    color: white;
-    font-weight: bold;
-    font-size: 1.3em;
-    text-align: center;
-    padding: 15px 20px;
-  }
-  .panel-ribbon {
-    background-color: $gray-dark;
-    .ribbon {
-      height: 8px;
-    }
-  }
-  .panel-body {
-    background-color: white;
-    padding: 0;
-    border-radius: $panel-border-radius;
-    .background-image {
-      height: 200px;
-    }
-    .inner {
-      padding: 20px;
-      .text {
-        font-size: 1.2em;
-      }
-      .btn {
-        margin-top: 20px;
-      }
-    }
-  }
-}
-
-.ribbon {
-  background: linear-gradient(to right, rgba(255,255,255,0) 0%, white 30%, white 70%, rgba(255,255,255,0) 100%);
-  &.ribbon-blue { @include ribbon-blue(); }
-  &.ribbon-red { @include ribbon-red(); }
-  &.ribbon-yellow { @include ribbon-yellow(); }
-}

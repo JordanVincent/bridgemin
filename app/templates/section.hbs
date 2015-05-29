@@ -1,13 +1,25 @@
 <div id="section" class="body">
   <div class="container">
     <div class="row">
-      <div class="col-sm-3">
+      <div class="col-sm-3 sidebar">
         <ul class="list-group">
           <li class="list-group-item">{{link-to model.title 'section' model}}</li>
           {{#each model.pages as |page|}}
             <li class="list-group-item">{{link-to page.title 'page' model page}}</li>
           {{/each}}
         </ul>
+        {{#each model.fragments as |fragment|}}
+          <div class="panel panel-box panel-box-inverse">
+            <div class="panel-heading">{{fragment.title}}</div>
+            <div class="panel-body">
+              {{background-image image=fragment.image}}
+              <div class="inner">
+                {{markdown-to-html markdown=fragment.body class="text"}}
+                {{view 'fragment-link' fragment=fragment goTo="goTo" class="center-block"}}
+              </div>
+            </div>
+          </div>
+        {{/each}}
       </div>
       <div class="col-sm-9">
         {{outlet}}

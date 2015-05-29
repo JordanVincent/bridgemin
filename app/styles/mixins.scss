@@ -1,0 +1,11 @@
+@mixin ribbon-red(){
+  background: linear-gradient(to right, $bridge-red-trans 0%, $bridge-red 30%, $bridge-red 70%, $bridge-red-trans 100%);
+}
+
+@mixin ribbon-yellow(){
+  background: linear-gradient(to right, $bridge-yellow-trans 0%, $bridge-yellow 30%, $bridge-yellow 70%, $bridge-yellow-trans 100%);
+}
+
+@mixin ribbon-blue(){
+  background: linear-gradient(to right, $bridge-blue-trans 0%, $bridge-blue 30%, $bridge-blue 70%, $bridge-blue-trans 100%);
+}

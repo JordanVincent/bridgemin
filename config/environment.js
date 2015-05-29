@@ -32,7 +32,8 @@ module.exports = function(environment) {
         section: '3Cdf29xH5YmCcCOQEgiqGE',
         page: '3SWJKtyBoAc8s4m0iYuO64',
         event: '7biTVxa9MciWC2m48WIuKO',
-        fragment: '9paU2Wen5eowMKSWCkAGS'
+        fragment: '9paU2Wen5eowMKSWCkAGS',
+        story: '3RtGrVRbYA6c8yUkY6AO8Y'
       }
     }
   };
@@ -68,7 +69,8 @@ module.exports = function(environment) {
         section: '52nbs0fDkcc2aCUAUkCAIC',
         page: '3QYmCl09M4I6oOG20Kk6KY',
         event: '7uJh6WNWBG2UEYqoqO6wmM',
-        fragment: '1AbspHBo6Mmm06soSWSQY0'
+        fragment: '1AbspHBo6Mmm06soSWSQY0',
+        story: 'SsZpd6c7iCQOQmmQCMkI4'
       }
     };
   }

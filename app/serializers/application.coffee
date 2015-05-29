@@ -30,8 +30,10 @@ ApplicationSerializer = DS.RESTSerializer.extend
     # Norm ID
     normalizedPayload.id = singlePayload.sys.id
 
-    # Norm ContentType
+    # Sys attributes
     normalizedPayload.contentTypeId = singlePayload.sys.contentType?.sys.id
+    normalizedPayload.createdAt = singlePayload.sys.createdAt
+    normalizedPayload.updatedAt = singlePayload.sys.updatedAt
 
     @_super(typeClass, normalizedPayload)
 

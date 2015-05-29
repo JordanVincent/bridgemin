@@ -3,6 +3,8 @@
 
 Model = DS.Model.extend
   contentTypeId: DS.attr()
+  createdAt: DS.attr('date')
+  updatedAt: DS.attr('date')
 
   contentType: Ember.computed 'contentTypeId',
     get: ->  @contentful.modelForContentType @get('contentTypeId')

@@ -20,6 +20,7 @@ IndexController = Ember.Controller.extend
     get: (name) -> @getFragment(name)
 
   upcomingEvent: Ember.computed.alias('events.firstObject')
+  recentStories: Ember.computed.alias('stories')
 
   getFragment: (name) ->
     @get('fragments').findBy('slug', name.dasherize().replace('-fragment', ''))

@@ -2,7 +2,8 @@
 
 ApplicationRoute = Ember.Route.extend
   beforeModel: ->
-    @set 'fragmentsPromise', @store.find('entry', {content_type: @contentful.contentTypeFor('fragment')})
+    @set 'fragmentsPromise', @store.find 'entry',
+      content_type: @contentful.contentTypeFor('fragment')
 
   model: ->
     @store.find('entry', {content_type: @contentful.contentTypeFor('section')})

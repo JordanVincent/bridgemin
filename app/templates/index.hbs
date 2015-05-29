@@ -69,6 +69,7 @@
               <div class="inner">
                 <h4>{{upcomingEvent.title}}</h4>
                 {{markdown-to-html markdown=upcomingEvent.body class="text"}}
+                {{view 'fragment-link' fragment=upcomingEvent goTo="goTo" class="center-block"}}
               </div>
             </ul>
           </div>
@@ -81,14 +82,25 @@
               <div class="inner">
                 <h4>{{friendMonthFragment.title}}</h4>
                 {{markdown-to-html markdown=friendMonthFragment.body class="text"}}
+                {{view 'fragment-link' fragment=friendMonthFragment goTo="goTo" class="center-block"}}
               </div>
             </div>
           </div>
         </div>
         <div class="col-sm-4">
           <div class="panel panel-box">
+            <div class="panel-heading">Bridge News</div>
             <div class="panel-body">
-              Volunteer
+              <div class="inner">
+                {{#each recentStories as |story|}}
+                  <div class="story">
+                    <h4>{{story.title}}</h4>
+                    <div class="date">Posted on {{moment story.createdAt 'MMMM Do, YYYY'}}</div>
+                    {{markdown-to-html markdown=story.body class="text"}}
+                    {{view 'fragment-link' fragment=story goTo="goTo" class="center-block"}}
+                  </div>
+                {{/each}}
+              </div>
             </div>
           </div>
         </div>

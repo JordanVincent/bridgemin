@@ -42,4 +42,28 @@
     &:nth-child(2) { width: 85%; }
     &:nth-child(3) { width: 80%; }
   }
+
+  .panel-box h4 {
+    margin-top: 0;
+  }
+
+  .story {
+    border-top: 1px solid $gray-light;
+    margin-top:20px;
+    padding-top: 20px;
+    &:first-child {
+      border-top: 0;
+      margin-top: 0;
+      padding-top: 0
+    }
+    h4 {
+      margin-bottom: 5px;
+    }
+    .date {
+      color: $gray;
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      font-style: italic
+    }
+  }
 }

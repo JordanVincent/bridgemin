@@ -17,4 +17,19 @@
   .text {
     padding: 20px;
   }
+
+  .newsletter-form {
+    padding: 20px;
+    .form-group {
+      width: 60%;
+      input.form-control {
+        width: 100%;
+        padding: 18px 12px;
+      }
+    }
+    .btn {
+      margin-left: 5%;
+      width: 35%;
+    }
+  }
 }

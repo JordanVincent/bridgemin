@@ -41,7 +41,7 @@ body {
   .panel-body {
     background-color: white;
     padding: 0;
-    border-radius: $panel-border-radius;
+    border-radius: 0 0 $panel-border-radius $panel-border-radius;
     .background-image {
       height: 200px;
     }

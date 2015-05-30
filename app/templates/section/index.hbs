@@ -3,5 +3,7 @@
   {{#if model.image}}
     {{background-image image=model.image class="section-image"}}
   {{/if}}
-  {{page-content page=model}}
+  {{#page-content page=model}}
+    {{outlet 'extra'}}
+  {{/page-content}}
 </div>

@@ -21,7 +21,9 @@ module.exports = function(environment) {
     contentSecurityPolicy: {
       'connect-src': "'self' cdn.contentful.com",
       'img-src': "'self' images.contentful.com",
-      'style-src': "'self' 'unsafe-inline'"
+      'style-src': "'self' 'unsafe-inline'",
+      'frame-src': "www.flickr.com www.facebook.com static.ak.facebook.com s-static.ak.facebook.com",
+      'script-src': "'self' 'unsafe-inline' connect.facebook.net"
     },
 
     contentful: {

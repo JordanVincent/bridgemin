@@ -61,6 +61,7 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     ENV.baseURL = '/redesign';
+    ENV.locationType = 'hash';
 
     ENV.contentful = {
       host: 'https://cdn.contentful.com',

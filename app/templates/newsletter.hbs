@@ -1,0 +1,7 @@
+{{newsletter-form}}
+<h2>Newsletter Archive</h2>
+<ul class="list-group">
+{{#each model as |newsletter|}}
+  <li class="list-group-item"><a href="{{newsletter.file.url}}" target="_blank">{{newsletter.title}}</a></li>
+{{/each}}
+</ul>

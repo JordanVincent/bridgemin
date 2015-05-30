@@ -37,5 +37,9 @@ PageRoute = Ember.Route.extend
       @store.find('entry',
         content_type: @contentful.contentTypeFor('event')
       )
+    else if customTemplate is 'newsletter'
+      @store.find('entry',
+        content_type: @contentful.contentTypeFor('newsletter')
+      )
 
 `export default PageRoute;`

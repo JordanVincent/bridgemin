@@ -17,10 +17,6 @@ Entry = Model.extend
   icon: DS.belongsTo('asset')
   isProgram: DS.attr()
   description: DS.attr()
-  titleBreak: Ember.computed 'title',
-    get: ->
-      return unless @get('title')
-      @get('title').replace(' ','<br>')
 
   # pages
   section: DS.belongsTo('entry', {async: true, inverse: null})
@@ -32,10 +28,25 @@ Entry = Model.extend
   # events
   date: DS.attr('date')
 
+  # newsletter
+  file: DS.belongsTo('asset')
+
+  # computed
+
+  titleBreak: Ember.computed 'title',
+    get: ->
+      return unless @get('title')
+      @get('title').replace(' ','<br>')
+
   linkHref: Ember.computed 'link.contentType', 'link.slug',
     get: ->
       model = @contentful.modelForContentType @get('link.contentType')
       if model is 'section'
         @get('link.slug')
+
+  bodyHTML: Ember.computed 'body',
+    get: ->
+      return unless @get('body')
+      @get('body').replace('<table','<table class="table"','g')
 
 `export default Entry;`

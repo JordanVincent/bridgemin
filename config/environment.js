@@ -33,7 +33,8 @@ module.exports = function(environment) {
         page: '3SWJKtyBoAc8s4m0iYuO64',
         event: '7biTVxa9MciWC2m48WIuKO',
         fragment: '9paU2Wen5eowMKSWCkAGS',
-        story: '3RtGrVRbYA6c8yUkY6AO8Y'
+        story: '3RtGrVRbYA6c8yUkY6AO8Y',
+        newsletter: '4XfZYlNtTWgMwSesyskwgI'
       }
     }
   };
@@ -70,7 +71,8 @@ module.exports = function(environment) {
         page: '3QYmCl09M4I6oOG20Kk6KY',
         event: '7uJh6WNWBG2UEYqoqO6wmM',
         fragment: '1AbspHBo6Mmm06soSWSQY0',
-        story: 'SsZpd6c7iCQOQmmQCMkI4'
+        story: 'SsZpd6c7iCQOQmmQCMkI4',
+        newsletter: '2lXaQcSQfSO6M6gEEIEYOg'
       }
     };
   }

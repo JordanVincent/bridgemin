@@ -1,7 +1,9 @@
 
 {{#if page}}
   <h1>{{page.title}}</h1>
-  {{markdown-to-html markdown=page.body}}
+  {{markdown-to-html markdown=page.bodyHTML}}
 {{else}}
   <em>Oops, nothing here!</em>
 {{/if}}
+
+{{yield}}

@@ -84,7 +84,7 @@ body {
 }
 
 .ribbon {
-  background: linear-gradient(to right, rgba(255,255,255,0) 0%, white 30%, white 70%, rgba(255,255,255,0) 100%);
+  @include ribbon();
   &.ribbon-blue { @include ribbon-blue(); }
   &.ribbon-red { @include ribbon-red(); }
   &.ribbon-yellow { @include ribbon-yellow(); }

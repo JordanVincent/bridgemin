@@ -27,9 +27,27 @@
         margin-bottom: 5px;
       }
 
-      & > .ribbon {
+      & > .ribbons {
         height: 5px;
-        opacity: .2;
+        position: relative;
+        .ribbon-main, .ribbons-small {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+        }
+        .ribbon-main {
+          opacity: .3;
+        }
+        .ribbon-small {
+          vertical-align: top;
+          height: 100%;
+          width: 140px;
+          display: inline-block;
+          opacity: 0;
+          &.active {
+            opacity: 1;
+          }
+        }
       }
     }
 

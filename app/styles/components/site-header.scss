@@ -55,10 +55,14 @@
     .nav {
       padding-top: 10px;
       & > li {
-        max-width: 130px;
+        width: 100px;
         text-align: center;
         & > a {
         }
+      }
+
+      &.nav-programs > li {
+        width: 140px;
       }
     }
   }

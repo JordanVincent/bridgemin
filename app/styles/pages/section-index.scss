@@ -1,5 +1,30 @@
 #section-index {
-  .section-image {
-    height: 200px;
+  .section-header {
+    background-color: $gray-dark;
+    color: white;
+    border-radius: $panel-border-radius;
+    margin-bottom: 20px;
+
+    h1, img {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    img {
+      width: 25%;
+      max-height: 180px;
+      padding: 40px;
+    }
+
+    h1 {
+      width: 75%;
+      font-size: 3em;
+      padding: 40px 40px 40px 0;
+      margin: 0;
+    }
+
+    .ribbon {
+      height: 18px;
+    }
   }
 }

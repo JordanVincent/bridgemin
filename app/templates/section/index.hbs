@@ -1,7 +1,11 @@
 <div id="section-index">
-  {{#if model.image}}
-    {{background-image image=model.image class="section-image"}}
-  {{/if}}
+  <div class="section-header">
+    <div class="inner">
+      <img src={{model.image.url}} /><!--
+      --><h1>{{model.title}}</h1>
+    </div>
+    <div class="ribbon {{model.ribbonClass}}"></div>
+  </div>
   {{#page-content page=model}}
     {{outlet 'extra'}}
   {{/page-content}}

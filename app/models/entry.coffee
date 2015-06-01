@@ -48,7 +48,8 @@ Entry = Model.extend
   bodyHTML: Ember.computed 'body',
     get: ->
       return unless @get('body')
-      @get('body').replace('<table','<table class="table"','g')
+      body = @get('body').replace('<table','<table class="table"','g')
+      return marked(body).htmlSafe()
 
   ribbonClass: Ember.computed 'color',
     get: ->

@@ -5,7 +5,7 @@
     </div>
     <div class="panel-body">
       <p>{{moment event.date}}</p>
-      {{markdown-to-html markdown=event.body}}
+      <div>{{{event.bodyHTML}}}</div>
     </div>
   </div>
 {{/each}}

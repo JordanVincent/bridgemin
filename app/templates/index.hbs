@@ -4,7 +4,7 @@
       {{#background-image image=homeHeroFragment.image class="hero"}}
         <h1>{{homeHeroFragment.title}}</h1>
         <div class="inner">
-          {{markdown-to-html markdown=homeHeroFragment.bodyHTML class="text"}}
+          <div class="text">{{{homeHeroFragment.bodyHTML}}}</div>
           {{view 'fragment-link' fragment=homeHeroFragment goTo="goTo" class="center-block"}}
         </div>
       {{/background-image}}
@@ -26,7 +26,7 @@
             <div class="panel-body">
               {{background-image image=homeBox1Fragment.image}}
               <div class="inner">
-                {{markdown-to-html markdown=homeBox1Fragment.bodyHTML class="text"}}
+                <div class="text">{{{homeBox1Fragment.bodyHTML}}}</div>
                 {{view 'fragment-link' fragment=homeBox1Fragment goTo="goTo" class="center-block"}}
               </div>
             </div>
@@ -39,7 +39,7 @@
             <div class="panel-body">
               {{background-image image=homeBox2Fragment.image}}
               <div class="inner">
-                {{markdown-to-html markdown=homeBox2Fragment.bodyHTML class="text"}}
+                <div class="text">{{{homeBox2Fragment.bodyHTML}}}</div>
                 {{view 'fragment-link' fragment=homeBox2Fragment goTo="goTo" class="center-block"}}
               </div>
             </div>
@@ -52,7 +52,7 @@
             <div class="panel-body">
               {{background-image image=homeBox3Fragment.image}}
               <div class="inner">
-                {{markdown-to-html markdown=homeBox3Fragment.bodyHTML class="text"}}
+                <div class="text">{{{homeBox3Fragment.bodyHTML}}}</div>
                 {{view 'fragment-link' fragment=homeBox3Fragment goTo="goTo" class="center-block"}}
               </div>
             </div>
@@ -68,7 +68,7 @@
               {{background-image image=upcomingEvent.image}}
               <div class="inner">
                 <h4>{{upcomingEvent.title}}</h4>
-                {{markdown-to-html markdown=upcomingEvent.body class="text"}}
+                <div class="text">{{{upcomingEvent.bodyHTML}}}</div>
                 {{view 'fragment-link' fragment=upcomingEvent goTo="goTo" class="center-block"}}
               </div>
             </ul>
@@ -81,7 +81,7 @@
               {{background-image image=friendMonthFragment.image}}
               <div class="inner">
                 <h4>{{friendMonthFragment.title}}</h4>
-                {{markdown-to-html markdown=friendMonthFragment.bodyHTML class="text"}}
+                <div class="text">{{{friendMonthFragment.bodyHTML}}}</div>
                 {{view 'fragment-link' fragment=friendMonthFragment goTo="goTo" class="center-block"}}
               </div>
             </div>
@@ -96,7 +96,7 @@
                   <div class="story">
                     <h4>{{story.title}}</h4>
                     <div class="date">Posted on {{moment story.createdAt 'MMMM Do, YYYY'}}</div>
-                    {{markdown-to-html markdown=story.body class="text"}}
+                    <div class="text">{{{story.bodyHTML}}}</div>
                     {{view 'fragment-link' fragment=story goTo="goTo" class="center-block"}}
                   </div>
                 {{/each}}

@@ -4,17 +4,17 @@
       <div class="col-sm-4">
         <h3>{{box1Fragment.title}}</h3>
         <div class="ribbon"></div>
-        {{markdown-to-html markdown=box1Fragment.body class="text"}}
+        <div class="text">{{{box1Fragment.bodyHTML}}}</div>
       </div>
       <div class="col-sm-4">
         <h3>{{box2Fragment.title}}</h3>
         <div class="ribbon"></div>
-        {{markdown-to-html markdown=box2Fragment.body class="text"}}
+        <div class="text">{{{box2Fragment.bodyHTML}}}</div>
       </div>
       <div class="col-sm-4">
         <h3>{{box3Fragment.title}}</h3>
         <div class="ribbon"></div>
-        {{markdown-to-html markdown=box3Fragment.body class="text"}}
+        <div class="text">{{{box3Fragment.bodyHTML}}}</div>
         {{newsletter-form}}
       </div>
     </div>

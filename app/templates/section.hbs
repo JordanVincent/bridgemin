@@ -22,7 +22,7 @@
             <div class="panel-body">
               {{background-image image=fragment.image}}
               <div class="inner">
-                {{markdown-to-html markdown=fragment.body class="text"}}
+                <div class="text">{{{fragment.bodyHTML}}}</div>
                 {{view 'fragment-link' fragment=fragment goTo="goTo" class="center-block"}}
               </div>
             </div>

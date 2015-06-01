@@ -2,9 +2,9 @@
   <div class="head">
     <div class="container">
       {{#background-image image=homeHeroFragment.image class="hero"}}
+        <h1>{{homeHeroFragment.title}}</h1>
         <div class="inner">
-          <h1>{{homeHeroFragment.title}}</h1>
-          {{markdown-to-html markdown=homeHeroFragment.body class="text"}}
+          {{markdown-to-html markdown=homeHeroFragment.bodyHTML class="text"}}
           {{view 'fragment-link' fragment=homeHeroFragment goTo="goTo" class="center-block"}}
         </div>
       {{/background-image}}
@@ -26,7 +26,7 @@
             <div class="panel-body">
               {{background-image image=homeBox1Fragment.image}}
               <div class="inner">
-                {{markdown-to-html markdown=homeBox1Fragment.body class="text"}}
+                {{markdown-to-html markdown=homeBox1Fragment.bodyHTML class="text"}}
                 {{view 'fragment-link' fragment=homeBox1Fragment goTo="goTo" class="center-block"}}
               </div>
             </div>
@@ -39,7 +39,7 @@
             <div class="panel-body">
               {{background-image image=homeBox2Fragment.image}}
               <div class="inner">
-                {{markdown-to-html markdown=homeBox2Fragment.body class="text"}}
+                {{markdown-to-html markdown=homeBox2Fragment.bodyHTML class="text"}}
                 {{view 'fragment-link' fragment=homeBox2Fragment goTo="goTo" class="center-block"}}
               </div>
             </div>
@@ -52,7 +52,7 @@
             <div class="panel-body">
               {{background-image image=homeBox3Fragment.image}}
               <div class="inner">
-                {{markdown-to-html markdown=homeBox3Fragment.body class="text"}}
+                {{markdown-to-html markdown=homeBox3Fragment.bodyHTML class="text"}}
                 {{view 'fragment-link' fragment=homeBox3Fragment goTo="goTo" class="center-block"}}
               </div>
             </div>
@@ -81,7 +81,7 @@
               {{background-image image=friendMonthFragment.image}}
               <div class="inner">
                 <h4>{{friendMonthFragment.title}}</h4>
-                {{markdown-to-html markdown=friendMonthFragment.body class="text"}}
+                {{markdown-to-html markdown=friendMonthFragment.bodyHTML class="text"}}
                 {{view 'fragment-link' fragment=friendMonthFragment goTo="goTo" class="center-block"}}
               </div>
             </div>

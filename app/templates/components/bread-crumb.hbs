@@ -1,7 +1,5 @@
-<ol class="breadcrumb">
-  <li>{{link-to 'Home' 'index'}}</li>
-  <li>{{link-to section.title 'section' section}}</li>
-  {{#if page}}
-    <li>{{link-to page.title 'page' section page}}</li>
-  {{/if}}
-</ol>
+<li>{{link-to 'Home' 'index'}}</li>
+<li>{{link-to section.title 'section' section}}</li>
+{{#if page}}
+<li>{{link-to page.title 'page' section page}}</li>
+{{/if}}

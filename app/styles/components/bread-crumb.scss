@@ -1,0 +1,12 @@
+.bread-crumb.breadcrumb {
+  padding: 0;
+
+  a {
+    color: $text-color;
+  }
+
+  & > li + li:before {
+    content: "\203A";
+    color: $text-color;
+  }
+}

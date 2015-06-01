@@ -1,7 +1,8 @@
 `import Ember from "ember";`
 `import CustomTemplateRouteMixin from "../mixins/custom-template-route";`
+`import BreadcrumbRouteMixin from "../mixins/breadcrumb-route";`
 
-PageRoute = Ember.Route.extend CustomTemplateRouteMixin,
+PageRoute = Ember.Route.extend CustomTemplateRouteMixin, BreadcrumbRouteMixin,
   serialize: (model, params) ->
     { page_slug: model.get('slug')}
 

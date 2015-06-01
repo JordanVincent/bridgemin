@@ -3,12 +3,19 @@
     {{outlet 'breadcrumb'}}
     <div class="row">
       <div class="col-sm-3 sidebar">
-        <ul class="list-group">
-          <li class="list-group-item">{{link-to model.title 'section' model}}</li>
-          {{#each model.pages as |page|}}
-            <li class="list-group-item">{{link-to page.title 'page' model page}}</li>
-          {{/each}}
-        </ul>
+
+        <div class="panel panel-box panel-box-inverse sidenav">
+          {{link-to model.title 'section.index' model class="panel-heading"}}
+          <div class="panel-ribbon"><div class="ribbon {{model.ribbonClass}}"></div></div>
+          {{#if model.pages}}
+            <div class="list-group">
+              {{#each model.pages as |page|}}
+                {{link-to page.title 'page' model page class="list-group-item"}}
+              {{/each}}
+            </div>
+          {{/if}}
+        </div>
+
         {{#each model.fragments as |fragment|}}
           <div class="panel panel-box panel-box-inverse">
             <div class="panel-heading">{{fragment.title}}</div>
@@ -21,6 +28,7 @@
             </div>
           </div>
         {{/each}}
+
       </div>
       <div class="col-sm-9">
         {{outlet}}

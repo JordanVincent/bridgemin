@@ -33,6 +33,7 @@ body {
     font-weight: bold;
     font-size: 1.3em;
     text-align: center;
+    display: block;
   }
   .panel-ribbon {
     background-color: $gray-dark;
@@ -60,9 +61,24 @@ body {
   }
 
   &.panel-box-inverse {
-    color: white;
+    &, a {
+      color: white;
+      text-decoration: none;
+    }
     .panel-body {
       background-color: $gray-dark;
+    }
+    .list-group-item {
+      background-color: $gray-dark;
+      border-color: #555;
+      &:first-child {
+        border-top: 0;
+      }
+    }
+    a.list-group-item, a.panel-heading {
+      &.active, &:active, &:hover {
+        background-color: $gray-darker;
+      }
     }
   }
 }

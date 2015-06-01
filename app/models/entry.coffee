@@ -17,6 +17,7 @@ Entry = Model.extend
   icon: DS.belongsTo('asset')
   isProgram: DS.attr()
   description: DS.attr()
+  color: DS.attr()
 
   # pages
   section: DS.belongsTo('entry', {async: true, inverse: null})
@@ -48,5 +49,10 @@ Entry = Model.extend
     get: ->
       return unless @get('body')
       @get('body').replace('<table','<table class="table"','g')
+
+  ribbonClass: Ember.computed 'color',
+    get: ->
+      return unless @get('color')
+      "ribbon-#{@get('color')}"
 
 `export default Entry;`

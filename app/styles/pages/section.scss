@@ -6,11 +6,28 @@
       .panel-heading {
         font-size: 1.2em;
       }
+      .panel-ribbon {
+        &:last-child {
+          border-radius: 0 0 $panel-border-radius $panel-border-radius;
+        }
+        .ribbon {
+          height: 5px;
+        }
+      }
       .background-image {
         height: 150px;
       }
       .text {
         font-size: 1em;
+      }
+    }
+
+    .sidenav {
+      font-family: $headings-font-family;
+      font-weight: bold;
+      text-align: center;
+      .list-group-item {
+        font-size: 1.2em;
       }
     }
   }

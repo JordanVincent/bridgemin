@@ -1,6 +1,12 @@
 body {
   padding-top: 156px;
   background-color: #171A1F;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Barbedor;
+  font-weight: bold;
 }
 
 .body {
@@ -14,6 +20,7 @@ body {
 
 // Bootstrap overrides
 .btn {
+  font-family: Barbedor;
   border-radius: 500px;
   border: 0;
   font-weight: bold;
@@ -25,12 +32,13 @@ body {
   margin-bottom: 50px;
 
   .panel-heading {
+    padding: 15px 20px;
     background-color: $gray-dark;
     color: white;
+    font-family: Barbedor;
     font-weight: bold;
     font-size: 1.3em;
     text-align: center;
-    padding: 15px 20px;
   }
   .panel-ribbon {
     background-color: $gray-dark;

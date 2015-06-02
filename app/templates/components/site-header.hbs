@@ -7,10 +7,10 @@
     </div>
     <div class="col-sm-10">
       <div class="top-nav clearfix">
-        <button class="btn btn-warning navbar-btn pull-right">Donate</button>
+        {{view 'fragment-link' fragment=buttonFragment goTo="goTo" class="btn-warning navbar-btn pull-right"}}
         <ul class="nav nav-pills pull-right">
-          <li><a href="#">Directions</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li>{{view 'fragment-link' fragment=link1Fragment goTo="goTo" tagName="a" class="btn-link"}}</li>
+          <li>{{view 'fragment-link' fragment=link2Fragment goTo="goTo" tagName="a" class="btn-link"}}</li>
         </ul>
       </div>
       {{nav-bar programSections=programSections otherSections=otherSections class="bottom-nav"}}

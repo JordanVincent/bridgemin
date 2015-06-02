@@ -47,6 +47,12 @@
       padding: 10px;
       & > li {
         padding: 10px 0;
+        a {
+          font-weight: normal;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
       }
     }
   }

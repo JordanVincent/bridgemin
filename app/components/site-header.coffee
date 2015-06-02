@@ -11,4 +11,8 @@ SiteHeader = Ember.Component.extend
       @set('minimized', minimized)
   ).on('didInsertElement')
 
+  actions:
+    goTo: (route, model) ->
+      @sendAction('goTo', route, model)
+
 `export default SiteHeader;`

@@ -18,6 +18,15 @@ ApplicationController = Ember.Controller.extend
   footerBox3Fragment: Ember.computed 'fragments.[]',
     get: (name) -> @getFragment(name)
 
+  headerLink1Fragment: Ember.computed 'fragments.[]',
+    get: (name) -> @getFragment(name)
+
+  headerLink2Fragment: Ember.computed 'fragments.[]',
+    get: (name) -> @getFragment(name)
+
+  headerButtonFragment: Ember.computed 'fragments.[]',
+    get: (name) -> @getFragment(name)
+
   getFragment: (name) ->
     @get('fragments').findBy('slug', name.dasherize().replace('-fragment', ''))
 

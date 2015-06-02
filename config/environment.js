@@ -80,6 +80,10 @@ module.exports = function(environment) {
         reports: '5ZUoeeSorSoukcAuee4ma0'
       }
     };
+
+    ENV.googleAnalytics = {
+      webPropertyId: 'UA-15988821-1'
+    }
   }
 
   return ENV;

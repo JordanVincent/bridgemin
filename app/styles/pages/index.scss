@@ -41,22 +41,34 @@
     margin-top: 0;
   }
 
+  .panel-event, .panel-friend {
+    .truncated-text {
+      height: 160px;
+    }
+  }
+
+  .story.truncated-text {
+    height: 170px;
+  }
+
   .story {
     border-top: 1px solid $gray-light;
     margin-top:20px;
     padding-top: 20px;
     &:first-child {
       border-top: 0;
-      padding-top: 0
+      padding-top: 0;
     }
     h4 {
       margin-bottom: 5px;
     }
-    .date {
-      color: $gray;
-      font-size: 1.2em;
-      margin-bottom: 10px;
-      font-style: italic
-    }
+  }
+
+  .date {
+    color: $gray;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-style: italic;
+    font-family: $headings-font-family;
   }
 }

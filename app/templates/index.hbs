@@ -62,27 +62,32 @@
 
       <div class="row">
         <div class="col-sm-4">
-          <div class="panel panel-box">
+          <div class="panel panel-box panel-event">
             <div class="panel-heading">Upcoming Event</div>
             <ul class="panel-body">
               {{background-image image=upcomingEvent.image}}
               <div class="inner">
-                <h4>{{upcomingEvent.title}}</h4>
-                <div class="text">{{{upcomingEvent.bodyHTML}}}</div>
-                {{view 'fragment-link' fragment=upcomingEvent goTo="goTo" class="center-block"}}
+                <div class="truncated-text">
+                  <h4>{{upcomingEvent.title}}</h4>
+                  <div class="date">{{moment upcomingEvent.date 'MMMM Do, YYYY'}}</div>
+                  <div class="text">{{{upcomingEvent.bodyHTML}}}</div>
+                  {{view 'fragment-link' fragment=upcomingEvent goTo="goTo" isLink=true}}
+                </div>
               </div>
             </ul>
           </div>
         </div>
         <div class="col-sm-4">
-          <div class="panel panel-box">
+          <div class="panel panel-box panel-friend">
             <div class="panel-heading">Friend of the Month</div>
             <div class="panel-body">
               {{background-image image=friendMonthFragment.image}}
               <div class="inner">
-                <h4>{{friendMonthFragment.title}}</h4>
-                <div class="text">{{{friendMonthFragment.bodyHTML}}}</div>
-                {{view 'fragment-link' fragment=friendMonthFragment goTo="goTo" class="center-block"}}
+                <div class="truncated-text">
+                  <h4>{{friendMonthFragment.title}}</h4>
+                  <div class="text">{{{friendMonthFragment.bodyHTML}}}</div>
+                  {{view 'fragment-link' fragment=friendMonthFragment goTo="goTo" isLink=true}}
+                </div>
               </div>
             </div>
           </div>
@@ -93,11 +98,11 @@
             <div class="panel-body">
               <div class="inner">
                 {{#each recentStories as |story|}}
-                  <div class="story">
+                  <div class="story truncated-text">
                     <h4>{{story.title}}</h4>
                     <div class="date">Posted on {{moment story.createdAt 'MMMM Do, YYYY'}}</div>
                     <div class="text">{{{story.bodyHTML}}}</div>
-                    {{view 'fragment-link' fragment=story goTo="goTo" class="center-block"}}
+                    {{view 'fragment-link' fragment=story goTo="goTo" isLink=true}}
                   </div>
                 {{/each}}
               </div>

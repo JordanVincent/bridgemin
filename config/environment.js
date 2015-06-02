@@ -77,7 +77,7 @@ module.exports = function(environment) {
         fragment: '1AbspHBo6Mmm06soSWSQY0',
         story: 'SsZpd6c7iCQOQmmQCMkI4',
         newsletter: '2lXaQcSQfSO6M6gEEIEYOg',
-        reports: '5ZUoeeSorSoukcAuee4ma0'
+        report: '5ZUoeeSorSoukcAuee4ma0'
       }
     };
 

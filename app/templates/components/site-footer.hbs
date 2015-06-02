@@ -1,23 +1,24 @@
-<div id="site-footer">
-  <div class="container">
-    <div class="raw clearfix">
-      <div class="col-sm-4">
-        <h3>{{box1Fragment.title}}</h3>
-        <div class="ribbon"></div>
-        <div class="text">{{{box1Fragment.bodyHTML}}}</div>
-      </div>
-      <div class="col-sm-4">
-        <h3>{{box2Fragment.title}}</h3>
-        <div class="ribbon"></div>
-        <div class="text">{{{box2Fragment.bodyHTML}}}</div>
-      </div>
-      <div class="col-sm-4">
-        <h3>{{box3Fragment.title}}</h3>
-        <div class="ribbon"></div>
-        <div class="text">{{{box3Fragment.bodyHTML}}}</div>
-        {{newsletter-form}}
-        {{social-media-links}}
-      </div>
+<div class="container">
+  <div class="raw clearfix">
+    <div class="col-sm-4">
+      <h3>{{box1Fragment.title}}</h3>
+      <div class="ribbon"></div>
+      <div class="text">{{{box1Fragment.bodyHTML}}}</div>
+      {{contact-links}}
+    </div>
+    <div class="col-sm-4">
+      <h3>{{box2Fragment.title}}</h3>
+      <div class="ribbon"></div>
+      <div class="text">{{{box2Fragment.bodyHTML}}}</div>
+    </div>
+    <div class="col-sm-4">
+      <h3>{{box3Fragment.title}}</h3>
+      <div class="ribbon"></div>
+      <div class="text">{{{box3Fragment.bodyHTML}}}</div>
+      {{newsletter-form}}
+      <h4 class="text-center">Follow Us</h4>
+      {{social-media-links}}
     </div>
   </div>
+  <p class="text-center copyright" >Copyright &copy; {{year}} Bridge Disability Ministries</p>
 </div>

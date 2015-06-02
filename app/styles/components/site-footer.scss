@@ -1,4 +1,4 @@
-#site-footer {
+.site-footer {
   background-color: $gray-dark;
   padding: 30px 0;
   color: white;
@@ -15,7 +15,7 @@
   }
 
   .text {
-    padding: 20px;
+    margin: 20px;
   }
 
   .newsletter-form {
@@ -32,7 +32,11 @@
       width: 35%;
     }
   }
-  .social-media-links {
-    padding: 20px;
+  .social-media-links, .contact-links {
+    margin: 20px;
+  }
+
+  .copyright {
+    font-family: $headings-font-family;
   }
 }

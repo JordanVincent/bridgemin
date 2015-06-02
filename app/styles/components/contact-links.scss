@@ -1,0 +1,15 @@
+.contact-links {
+  .link {
+    margin-bottom: 10px;
+    img {
+      width: 50px;
+      margin-right: 20px;
+    }
+    img, p {
+      display: inline-block;
+    }
+    a {
+      color: white;
+    }
+  }
+}

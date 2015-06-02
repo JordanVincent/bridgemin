@@ -11,4 +11,8 @@ NavBar = Ember.Component.extend
       $(@).removeClass('open')
   ).on('didInsertElement')
 
+  actions:
+    goTo: (route, model) ->
+      @sendAction('goTo', route, model)
+
 `export default NavBar;`

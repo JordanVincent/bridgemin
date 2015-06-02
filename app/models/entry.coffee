@@ -22,8 +22,10 @@ Entry = Model.extend
   # pages
   section: DS.belongsTo('entry', {async: true, inverse: null})
 
-  # fragments
+  # fragments & pages
   link: DS.belongsTo('entry', {async: true, inverse: null})
+
+  # fragment
   linkText: DS.attr()
 
   # events
@@ -55,5 +57,8 @@ Entry = Model.extend
     get: ->
       return unless @get('color')
       "ribbon-#{@get('color')}"
+
+  hasLink: Ember.computed 'link',
+    get: -> @get('link')
 
 `export default Entry;`

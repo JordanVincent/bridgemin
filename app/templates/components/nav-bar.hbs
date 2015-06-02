@@ -32,7 +32,13 @@
                 <img class="section-icon" src="{{section.icon.url}}"/><!--
                 -->{{#if section.pages}}<ul class="page-links">
                   {{#each section.pages as |page|}}
-                    <li>{{link-to page.title 'page' section page}}</li>
+                    <li>
+                      {{#if page.hasLink}}
+                        {{view 'entry-link' entry=page.link title=page.title goTo="goTo"}}
+                      {{else}}
+                        {{link-to page.title 'page' section page}}
+                      {{/if}}
+                    </li>
                   {{/each}}
                 </ul>{{/if}}
               </div>
@@ -50,7 +56,13 @@
           <div class="dropdown-menu" role="menu">
             <ul class="inner">
             {{#each section.pages as |page|}}
-              <li>{{link-to page.title 'page' section page}}</li>
+              <li>
+                {{#if page.hasLink}}
+                  {{view 'entry-link' entry=page.link title=page.title goTo="goTo"}}
+                {{else}}
+                  {{link-to page.title 'page' section page}}
+                {{/if}}
+              </li>
             {{/each}}
             </ul>
           </div>

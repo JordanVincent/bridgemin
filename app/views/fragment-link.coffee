@@ -11,6 +11,7 @@ FragmentLink = Ember.View.extend
       !@get('fragment.linkText')?
 
   click: ->
-    @get('controller').send('goTo', @get('fragment.link.contentType'), @get('fragment.link'))
+    @get('controller')
+    .send('goTo', @get('fragment.link.contentType'), @get('fragment.link'))
 
 `export default FragmentLink;`

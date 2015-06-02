@@ -10,7 +10,11 @@
           {{#if model.pages}}
             <div class="list-group">
               {{#each model.pages as |page|}}
-                {{link-to page.title 'page' model page class="list-group-item"}}
+                {{#if page.hasLink}}
+                  {{view 'entry-link' entry=page.link title=page.title goTo="goTo"  class="list-group-item"}}
+                {{else}}
+                  {{link-to page.title 'page' model page class="list-group-item"}}
+                {{/if}}
               {{/each}}
             </div>
           {{/if}}

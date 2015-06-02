@@ -1,6 +1,6 @@
 body {
   padding-top: 156px;
-  background-color: #171A1F;
+  @include background();
 }
 
 .body {
@@ -9,7 +9,7 @@ body {
 }
 
 .head {
-  background-color: #171A1F;
+  @include background();
 }
 
 // Bootstrap overrides

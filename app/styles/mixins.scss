@@ -13,3 +13,10 @@
 @mixin ribbon-blue(){
   background: linear-gradient(to right, $bridge-blue-trans 0%, $bridge-blue 30%, $bridge-blue 70%, $bridge-blue-trans 100%);
 }
+
+@mixin background(){
+  background-color: #171A1F;
+  background-image: url(#{$images-path}/background.png);
+  background-size: cover;
+  background-attachment: fixed;
+}

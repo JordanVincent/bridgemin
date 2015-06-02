@@ -28,6 +28,10 @@ CustomTemplateRoute = Ember.Mixin.create
       @store.find('entry',
         content_type: @contentful.contentTypeFor('newsletter')
       )
+    else if customTemplate is 'reports'
+      @store.find('entry',
+        content_type: @contentful.contentTypeFor('report')
+      )
 
   renderBreadcrumb: ->
     Ember.Logger.warn('renderBreadcrumb not defined. Please import BreadcrumbRouteMixin')

@@ -1,0 +1,18 @@
+.social-media-links {
+  a {
+    display: inline-block;
+    width: 33.3333%;
+    transition: .3s;
+
+    img {
+      width: 50px;
+      margin: 0 auto;
+      display: block;
+      border-radius: 100%;
+    }
+
+    &:hover img {
+      background-color: rgba(255, 255, 255, 0.25);
+    }
+  }
+}

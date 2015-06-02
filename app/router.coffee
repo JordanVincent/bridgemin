@@ -7,5 +7,6 @@ Router = Ember.Router.extend
 Router.map ->
   @resource 'section', { path: '/:slug' }, ->
     @resource 'page', { path: ':page_slug' }
+  @route 'donate'
 
 `export default Router;`

@@ -1,28 +1,9 @@
 `import Ember from "ember";`
+`import FragmentsManagerMixin from "../mixins/fragments-manager";`
 
-IndexController = Ember.Controller.extend
-  needs: ['application']
-  fragments: Ember.computed.alias("controllers.application.fragments")
-
-  homeHeroFragment: Ember.computed 'fragments.[]',
-    get: (name) -> @getFragment(name)
-
-  homeBox1Fragment: Ember.computed 'fragments.[]',
-    get: (name) -> @getFragment(name)
-
-  homeBox2Fragment: Ember.computed 'fragments.[]',
-    get: (name) -> @getFragment(name)
-
-  homeBox3Fragment: Ember.computed 'fragments.[]',
-    get: (name) -> @getFragment(name)
-
-  friendMonthFragment: Ember.computed 'fragments.[]',
-    get: (name) -> @getFragment(name)
+IndexController = Ember.Controller.extend FragmentsManagerMixin,
 
   upcomingEvent: Ember.computed.alias('events.firstObject')
   recentStories: Ember.computed.alias('stories')
-
-  getFragment: (name) ->
-    @get('fragments').findBy('slug', name.dasherize().replace('-fragment', ''))
 
 `export default IndexController;`

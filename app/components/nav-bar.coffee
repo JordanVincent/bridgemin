@@ -5,11 +5,15 @@ NavBar = Ember.Component.extend
   classNames: ['nav-bar','navbar', 'navbar-default']
 
   enableDropdowns:( ->
-    @$().find('.dropdown').hover ->
+    @$().find('.dropdown').on 'hover.navbar', ->
       $(@).addClass('open')
     , ->
       $(@).removeClass('open')
   ).on('didInsertElement')
+
+  disableDropdowns:( ->
+    @$().find('.dropdown').off('hover.navbar')
+  ).on('willDestroyElement')
 
   actions:
     goTo: (route, model) ->

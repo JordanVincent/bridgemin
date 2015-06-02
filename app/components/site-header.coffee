@@ -3,13 +3,23 @@
 SiteHeader = Ember.Component.extend
   classNames: ['site-header','head']
   classNameBindings: ['minimized']
-  minimized: false
+  autoMinimized: false
+  forceMinimized: false
+
+  minimized: Ember.computed 'autoMinimized', 'forceMinimized',
+    get: ->
+      return true if @get('forceMinimized')
+      @get('autoMinimized')
 
   trackScroll: (->
-    $(document).scroll =>
-      minimized = $(document).scrollTop() > 0
-      @set('minimized', minimized)
+    $(document).on 'scroll.header', =>
+      autoMinimized = $(document).scrollTop() > 0
+      @set('autoMinimized', autoMinimized)
   ).on('didInsertElement')
+
+  unTrackScroll: (->
+    $(document).off('scroll.header')
+  ).on('willDestroyElement')
 
   actions:
     goTo: (route, model) ->

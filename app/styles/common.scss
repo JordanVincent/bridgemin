@@ -134,6 +134,13 @@ body {
   }
 }
 
+.box {
+  padding: 20px;
+  border: 1px solid $gray-light;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
 hr {
   border-top-color: $gray-light;
 }

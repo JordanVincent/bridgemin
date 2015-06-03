@@ -1,7 +1,22 @@
-{{newsletter-form}}
-<h2>Newsletter Archive</h2>
-<ul class="list-group">
-{{#each model as |newsletter|}}
-  <li class="list-group-item"><a href="{{newsletter.file.url}}" target="_blank">{{newsletter.title}}</a></li>
-{{/each}}
-</ul>
+<div class="newsletter">
+  <div class="content-box">
+    <h1>Subscribe to our Newsletter</h1>
+    {{newsletter-form btnClass="btn-primary"}}
+  </div>
+
+  <div class="content-box">
+    <h1>Newsletter Archive</h1>
+    <div class="row">
+    {{#each model as |newsletter|}}
+      <a href="{{newsletter.file.url}}" target="_blank" class="col-sm-4 newsletter-file">
+        {{#if newsletter.image}}
+          <img src="{{newsletter.image.url}}"/>
+        {{else}}
+          <img src="assets/images/newsletter-placeholder.png"/>
+        {{/if}}
+        <div class="newsletter-label">{{newsletter.title}}</div>
+      </a>
+    {{/each}}
+    </div>
+  </div>
+</div>

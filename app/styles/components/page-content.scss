@@ -1,9 +1,20 @@
 .page-content {
-  background: white;
-  padding: 20px;
-  border-radius: $panel-border-radius;
-
-  .page-title {
+  *:first-child {
     margin-top: 0;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  h2 { font-size: 20px; }
+  h3 { font-size: 16px; }
+  h4 { font-size: 12px; }
+
+  .content-box {
+    background: white;
+    padding: 20px;
+    border-radius: $panel-border-radius;
+    margin-bottom: 20px;
   }
 }

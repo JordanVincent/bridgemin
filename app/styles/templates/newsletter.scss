@@ -1,0 +1,28 @@
+.newsletter {
+  .newsletter-file {
+    margin-bottom: 20px;
+    &:hover {
+      text-decoration: none;
+      img {
+        border-color: $gray;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    border: 1px solid $gray-light;
+    border-radius: 5px;
+  }
+
+  .newsletter-label {
+    color: $gray;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .newsletter-form .btn {
+    margin-left: 20px;
+  }
+}

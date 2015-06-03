@@ -1,8 +1,9 @@
-{{#if page.isPage}}<h1 class="page-title">{{page.title}}</h1>{{/if}}
-{{#if page}}
-  {{{page.bodyHTML}}}
-{{else}}
-  <em>Oops, nothing here!</em>
-{{/if}}
-
+<div class="content-box">
+  {{#if page.isPage}}<h1 class="page-title">{{page.title}}</h1>{{/if}}
+  {{#if page}}
+    {{{page.bodyHTML}}}
+  {{else}}
+    <em>Oops, nothing here!</em>
+  {{/if}}
+</div>
 {{yield}}

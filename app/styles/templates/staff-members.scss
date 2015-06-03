@@ -1,0 +1,43 @@
+.staff-members {
+  .staff-member {
+    margin-bottom: 20px;
+    .inner {
+      border-radius: 0 0 5px 5px;
+      border: 1px solid $gray-light;
+      border-top: 0;
+      padding: 15px;
+      text-align: center;
+    }
+    .background-image {
+      height: 150px;
+      border-radius: 5px 5px 0 0;
+    }
+    .contact-info {
+      border-top: 1px solid $gray-light;
+      padding-top: 15px;
+      margin-top: 15px;
+    }
+    .name {
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+    .position {
+      margin-bottom: 15px;
+    }
+    .phone-number {
+      margin-bottom: 5px;
+      &:before {
+        width: 25px;
+        height: 25px;
+        content: '';
+        background-image: url(#{$images-path}/call.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: inline-block;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+    }
+  }
+}

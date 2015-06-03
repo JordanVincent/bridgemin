@@ -39,7 +39,8 @@ module.exports = function(environment) {
         newsletter: '4XfZYlNtTWgMwSesyskwgI',
         report: '6scZoCOqnSOIuWgcQ6cS4u',
         equipmentType: 'Dr7K0jOQGyoqWw2Kkmyku',
-        news: 'D260RpyvqoaMEIcmYS8G2'
+        news: 'D260RpyvqoaMEIcmYS8G2',
+        staffMember: '6I9pwAEN6owEYUSk6QCUyy'
       }
     }
   };
@@ -81,7 +82,8 @@ module.exports = function(environment) {
         newsletter: '2lXaQcSQfSO6M6gEEIEYOg',
         report: '5ZUoeeSorSoukcAuee4ma0',
         equipmentType: '3ZNVz0wQikUuw6wYmm2cWy',
-        news: '46UfMAO8HmwoCyI6waWc8A'
+        news: '46UfMAO8HmwoCyI6waWc8A',
+        staffMember: '5fCOPDjxFKE2gCKK684gUw'
       }
     };
 

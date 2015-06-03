@@ -20,27 +20,32 @@ CustomTemplateRoute = Ember.Mixin.create
       controller: customTemplate
 
   modelForCustom: (customTemplate) ->
-    if customTemplate is 'events'
-      @store.find('entry',
-        content_type: @contentful.contentTypeFor('event')
-      )
-    else if customTemplate is 'newsletter'
-      @store.find('entry',
-        content_type: @contentful.contentTypeFor('newsletter')
-      )
-    else if customTemplate is 'reports'
-      @store.find('entry',
-        content_type: @contentful.contentTypeFor('report')
-      )
-    else if customTemplate is 'stories'
-      @store.find('entry',
-        content_type: @contentful.contentTypeFor('story')
-        order: '-sys.updatedAt'
-      )
-    else if customTemplate is 'equipment-types'
-      @store.find('entry',
-        content_type: @contentful.contentTypeFor('equipmentType')
-      )
+    switch customTemplate
+      when 'events'
+        @store.find('entry',
+          content_type: @contentful.contentTypeFor('event')
+        )
+      when 'newsletter'
+        @store.find('entry',
+          content_type: @contentful.contentTypeFor('newsletter')
+        )
+      when 'reports'
+        @store.find('entry',
+          content_type: @contentful.contentTypeFor('report')
+        )
+      when 'stories'
+        @store.find('entry',
+          content_type: @contentful.contentTypeFor('story')
+          order: '-sys.updatedAt'
+        )
+      when 'equipment-types'
+        @store.find('entry',
+          content_type: @contentful.contentTypeFor('equipmentType')
+        )
+      when 'staff-members'
+        @store.find('entry',
+          content_type: @contentful.contentTypeFor('staffMember')
+        )
 
   renderBreadcrumb: ->
     Ember.Logger.warn('renderBreadcrumb not defined. Please import BreadcrumbRouteMixin')

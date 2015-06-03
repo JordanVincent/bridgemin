@@ -16,8 +16,10 @@ Entry = Model.extend
   position: DS.attr()
   icon: DS.belongsTo('asset')
   isProgram: DS.attr()
-  description: DS.attr()
   color: DS.attr()
+
+  # sections, staffMember
+  description: DS.attr()
 
   # pages
   section: DS.belongsTo('entry', {async: true, inverse: null})
@@ -41,6 +43,10 @@ Entry = Model.extend
 
   # story
   type: DS.attr()
+
+  # staffMember
+  phoneNumber: DS.attr()
+  email: DS.attr()
 
   # computed
 

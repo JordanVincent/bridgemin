@@ -1,0 +1,20 @@
+<div class="staff-members content-box">
+  <h1>Bridge Disability Ministries' Staff</h1>
+  <div class="row">
+  {{#each model as |staffMember|}}
+    <div class="col-sm-4">
+      <div class="staff-member">
+        {{background-image image=staffMember.image}}
+        <div class="inner">
+          <div class="position">{{staffMember.description}}</div>
+          <div class="name">{{staffMember.title}}</div>
+          <div class="contact-info">
+            <div class="phone-number">{{staffMember.phoneNumber}}</div>
+            <div class="email"><a href="mailto:{{staffMember.email}}">{{staffMember.email}}</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+  </div>
+</div>

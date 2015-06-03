@@ -51,10 +51,18 @@
     }
 
     .dropdown-menu {
-      width: 270px;
-      margin-left: -135px;
+      width: 300px;
+      margin-left: -150px;
+
+      .page-link {
+        border-radius: 5px;
+        border: 0;
+        padding: 5px 10px;
+        margin-bottom: 5px;
+      }
 
       & > .inner {
+        padding: 15px;
         .section-icon {
           padding: 20px
         }
@@ -65,9 +73,16 @@
 
         .section-icon, .page-links {
           display: inline-block;
-          width: 50%;
           margin: 0 auto;
           vertical-align: middle;
+        }
+
+        .section-icon {
+          width: 40%;
+        }
+
+        .page-links {
+          width: 60%;
         }
 
         .divider {
@@ -111,27 +126,23 @@
 
     & > .inner {
       background: $dropdown-bg;
-      padding: 15px;
       color: white;
     }
 
-    ul {
-      list-style-type: none;
-      padding: 0;
-
-      li {
-        font-size: 1.2em;
-        margin-bottom: 10px;
-
-        a {
-          text-decoration: none;
-          color: white;
-
-          &:hover {
-            text-decoration: underline;
-          }
-        }
+    .page-link {
+      padding: 10px 15px;
+      display: block;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      border-top: 1px solid $gray;
+      &:first-child {
+        border: 0;
+      }
+      &.active, &:active, &:hover {
+        background-color: $gray-darker;
       }
     }
+
   }
 }

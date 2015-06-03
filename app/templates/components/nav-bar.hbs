@@ -30,17 +30,15 @@
             <div class="inner">
               <div class="main">
                 <img class="section-icon" src="{{section.icon.url}}"/><!--
-                -->{{#if section.pages}}<ul class="page-links">
+                -->{{#if section.pages}}<div class="page-links">
                   {{#each section.pages as |page|}}
-                    <li>
-                      {{#if page.hasLink}}
-                        {{view 'entry-link' entry=page.link title=page.title goTo="goTo"}}
-                      {{else}}
-                        {{link-to page.title 'page' section page}}
-                      {{/if}}
-                    </li>
+                    {{#if page.hasLink}}
+                      {{view 'entry-link' entry=page.link title=page.title goTo="goTo" class="page-link"}}
+                    {{else}}
+                      {{link-to page.title 'page' section page class="page-link"}}
+                    {{/if}}
                   {{/each}}
-                </ul>{{/if}}
+                </div>{{/if}}
               </div>
               <div class="divider"></div>
               <div class="description">{{section.description}}</div>
@@ -54,17 +52,15 @@
         <li class="dropdown">
           {{#link-to 'section' section}}{{{section.titleBreak}}}{{/link-to}}
           <div class="dropdown-menu" role="menu">
-            <ul class="inner">
+            <div class="inner">
             {{#each section.pages as |page|}}
-              <li>
-                {{#if page.hasLink}}
-                  {{view 'entry-link' entry=page.link title=page.title goTo="goTo"}}
-                {{else}}
-                  {{link-to page.title 'page' section page}}
-                {{/if}}
-              </li>
+              {{#if page.hasLink}}
+                {{view 'entry-link' entry=page.link title=page.title goTo="goTo" class="page-link"}}
+              {{else}}
+                {{link-to page.title 'page' section page class="page-link"}}
+              {{/if}}
             {{/each}}
-            </ul>
+            </div>
           </div>
         </li>
       {{/each}}

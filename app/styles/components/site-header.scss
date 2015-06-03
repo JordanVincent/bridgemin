@@ -19,14 +19,14 @@
 
   .home-link {
     opacity: 0;
-    width: 0;
-    transition: 0.5s;
+    transition: opacity 0.5s;
     color: white;
     font-weight: bold;
     font-size: 1.2em;
-    margin-left: -5px;
-    padding: 0;
-    display: inline-block;
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    right: 20px;
   }
 
   .top-nav, .bottom-nav {
@@ -97,9 +97,6 @@
     }
     .home-link {
       opacity: 1;
-      width: auto;
-      padding: 8px 20px;
-
     }
     .top-nav {
       height: 0px;

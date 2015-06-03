@@ -1,3 +1,7 @@
 {{#page-content page=model}}
   {{outlet 'extra'}}
+
+  {{#each model.infographics as |infographic|}}
+    {{info-graphic infographic=infographic}}
+  {{/each}}
 {{/page-content}}

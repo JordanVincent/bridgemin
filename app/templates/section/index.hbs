@@ -1,4 +1,5 @@
 <div id="section-index">
+
   <div class="section-header">
     <div class="inner">
       {{#if model.image}}<img src={{model.image.url}} />{{/if}}<!--
@@ -6,7 +7,13 @@
     </div>
     <div class="ribbon {{model.ribbonClass}}"></div>
   </div>
+
   {{#page-content page=model}}
     {{outlet 'extra'}}
+
+    {{#each model.infographics as |infographic|}}
+      {{info-graphic infographic=infographic}}
+    {{/each}}
   {{/page-content}}
+
 </div>

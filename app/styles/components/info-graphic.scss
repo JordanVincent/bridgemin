@@ -1,0 +1,30 @@
+.info-graphic {
+  &.horizontal {
+    td, th {
+      text-align: center;
+      width: 33.33%;
+    }
+    th {
+      padding-bottom: 0;
+    }
+  }
+  &.vertical {
+    th {
+      text-align: right;
+      width: 20%;
+    }
+  }
+  th {
+    font-size: 3em;
+    line-height: 1;
+    font-weight: normal;
+  }
+
+  td, th {
+    padding: 20px;
+  }
+
+  table {
+    margin-top: 20px;
+  }
+}

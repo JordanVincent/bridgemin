@@ -1,0 +1,16 @@
+<h1>{{infographic.title}}</h1>
+{{{infographic.bodyHTML}}}
+
+<table>
+  {{#if isHorizontal}}
+    <tr>{{#each facts as |fact|}}<th>{{fact.number}}</th>{{/each}}</tr>
+    <tr>{{#each facts as |fact|}}<td>{{{fact.descriptionHTML}}}</td>{{/each}}</tr>
+  {{else}}
+    {{#each facts as |fact|}}
+      <tr>
+        <th>{{fact.number}}</th>
+        <td>{{{fact.descriptionHTML}}}</td>
+      </tr>
+    {{/each}}
+  {{/if}}
+</table>

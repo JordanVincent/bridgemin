@@ -24,6 +24,9 @@ Entry = Model.extend
   # pages
   section: DS.belongsTo('entry', {async: true, inverse: null})
 
+  # sections, pages
+  infographics: DS.hasMany('entry', {async: true, inverse: null})
+
   # fragments, pages, news, stories
   link: DS.belongsTo('entry', {async: true, inverse: null})
 
@@ -35,6 +38,15 @@ Entry = Model.extend
 
   # newsletter
   file: DS.belongsTo('asset')
+
+  # infographic
+  orientation: DS.attr()
+  fact1Number: DS.attr()
+  fact1Description: DS.attr()
+  fact2Number: DS.attr()
+  fact2Description: DS.attr()
+  fact3Number: DS.attr()
+  fact3Description: DS.attr()
 
   # equipmentType
   price: DS.attr()
@@ -62,10 +74,16 @@ Entry = Model.extend
         @get('link.slug')
 
   bodyHTML: Ember.computed 'body',
-    get: ->
-      return unless @get('body')
-      body = @get('body').replace('<table','<table class="table"','g')
-      return marked(body).htmlSafe()
+    get: -> @markdownToHTML @get('body')
+
+  fact1DescriptionHTML: Ember.computed 'fact1Description',
+    get: -> @markdownToHTML @get('fact1Description')
+
+  fact2DescriptionHTML: Ember.computed 'fact2Description',
+    get: -> @markdownToHTML @get('fact2Description')
+
+  fact3DescriptionHTML: Ember.computed 'fact3Description',
+    get: -> @markdownToHTML @get('fact3Description')
 
   ribbonClass: Ember.computed 'color',
     get: ->
@@ -74,5 +92,10 @@ Entry = Model.extend
 
   hasLink: Ember.computed 'link',
     get: -> @get('link')
+
+  markdownToHTML: (markdown) ->
+    return unless markdown
+    markdown = markdown.replace('<table','<table class="table"','g')
+    return marked(markdown).htmlSafe()
 
 `export default Entry;`

@@ -1,0 +1,14 @@
+<div class="stories">
+  <div class="content-box">
+    {{#each model as |story|}}
+      <div class="story">
+        <h1>{{story.type}}: {{story.title}}</h1>
+        <div class="date">Last edited on {{moment story.updatedAt 'MMMM Do, YYYY'}}</div>
+        <div class="inner clearfix">
+          <img src="{{story.image.url}}"/>
+          {{{story.bodyHTML}}}
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>

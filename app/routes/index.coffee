@@ -6,6 +6,10 @@ IndexRoute = Ember.Route.extend
       content_type: @contentful.contentTypeFor('event')
     @set 'storiesPromise', @store.find 'entry',
       content_type: @contentful.contentTypeFor('story')
+      order: '-sys.updatedAt'
+      limit: 1
+    @set 'newsPromise', @store.find 'entry',
+      content_type: @contentful.contentTypeFor('news')
       order: '-sys.createdAt'
       limit: 2
 
@@ -13,5 +17,6 @@ IndexRoute = Ember.Route.extend
     @_super(controller, model)
     controller.set('events', @get('eventsPromise'))
     controller.set('stories', @get('storiesPromise'))
+    controller.set('news', @get('newsPromise'))
 
 `export default IndexRoute;`

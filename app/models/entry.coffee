@@ -22,10 +22,10 @@ Entry = Model.extend
   # pages
   section: DS.belongsTo('entry', {async: true, inverse: null})
 
-  # fragments & pages
+  # fragments, pages, news, stories
   link: DS.belongsTo('entry', {async: true, inverse: null})
 
-  # fragment
+  # fragment, news, stories
   linkText: DS.attr()
 
   # events
@@ -38,6 +38,9 @@ Entry = Model.extend
   price: DS.attr()
   availability: DS.attr()
   pickUpMethods: DS.attr()
+
+  # story
+  type: DS.attr()
 
   # computed
 

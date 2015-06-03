@@ -42,9 +42,6 @@ FragmentsManager = Ember.Mixin.create
   homeBox3Fragment: Ember.computed 'fragments.[]',
     get: (name) -> @getFragment(name)
 
-  friendMonthFragment: Ember.computed 'fragments.[]',
-    get: (name) -> @getFragment(name)
-
   getFragment: (name) ->
     @get('fragments').findBy('slug', name.dasherize().replace('-fragment', ''))
 

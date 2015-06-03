@@ -41,17 +41,13 @@
     margin-top: 0;
   }
 
-  .panel-event, .panel-friend {
+  .panel-event, .panel-story {
     .truncated-text {
       height: 160px;
     }
   }
 
-  .story.truncated-text {
-    height: 180px;
-  }
-
-  .story {
+  .news {
     border-top: 1px solid $gray-light;
     margin-top: 20px;
     padding-top: 20px;
@@ -61,6 +57,9 @@
     }
     h4 {
       margin-bottom: 5px;
+    }
+    &.truncated-text {
+      height: 180px;
     }
   }
 

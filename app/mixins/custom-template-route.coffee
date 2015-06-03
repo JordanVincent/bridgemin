@@ -32,6 +32,11 @@ CustomTemplateRoute = Ember.Mixin.create
       @store.find('entry',
         content_type: @contentful.contentTypeFor('report')
       )
+    else if customTemplate is 'stories'
+      @store.find('entry',
+        content_type: @contentful.contentTypeFor('story')
+        order: '-sys.updatedAt'
+      )
     else if customTemplate is 'equipment-types'
       @store.find('entry',
         content_type: @contentful.contentTypeFor('equipmentType')

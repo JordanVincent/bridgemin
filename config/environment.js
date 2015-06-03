@@ -38,7 +38,8 @@ module.exports = function(environment) {
         story: '3RtGrVRbYA6c8yUkY6AO8Y',
         newsletter: '4XfZYlNtTWgMwSesyskwgI',
         report: '6scZoCOqnSOIuWgcQ6cS4u',
-        equipmentType: 'Dr7K0jOQGyoqWw2Kkmyku'
+        equipmentType: 'Dr7K0jOQGyoqWw2Kkmyku',
+        news: 'D260RpyvqoaMEIcmYS8G2'
       }
     }
   };
@@ -79,7 +80,8 @@ module.exports = function(environment) {
         story: 'SsZpd6c7iCQOQmmQCMkI4',
         newsletter: '2lXaQcSQfSO6M6gEEIEYOg',
         report: '5ZUoeeSorSoukcAuee4ma0',
-        equipmentType: '3ZNVz0wQikUuw6wYmm2cWy'
+        equipmentType: '3ZNVz0wQikUuw6wYmm2cWy',
+        news: '46UfMAO8HmwoCyI6waWc8A'
       }
     };
 

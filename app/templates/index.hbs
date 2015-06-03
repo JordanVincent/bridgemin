@@ -80,15 +80,15 @@
           </div>
         </div>
         <div class="col-sm-4">
-          <div class="panel panel-box panel-friend">
-            <div class="panel-heading">Friend of the Month</div>
+          <div class="panel panel-box panel-story">
+            <div class="panel-heading">{{recentStory.type}}</div>
             <div class="panel-body">
-              {{background-image image=friendMonthFragment.image}}
+              {{background-image image=recentStory.image}}
               <div class="inner">
                 <div class="truncated-text">
-                  <h4>{{friendMonthFragment.title}}</h4>
-                  <div class="text">{{{friendMonthFragment.bodyHTML}}}</div>
-                  {{view 'fragment-link' fragment=friendMonthFragment goTo="goTo" isLink=true}}
+                  <h4>{{recentStory.title}}</h4>
+                  <div class="text">{{{recentStory.bodyHTML}}}</div>
+                  {{view 'fragment-link' fragment=recentStory goTo="goTo" isLink=true}}
                 </div>
               </div>
             </div>
@@ -99,12 +99,12 @@
             <div class="panel-heading">Bridge News</div>
             <div class="panel-body">
               <div class="inner">
-                {{#each recentStories as |story|}}
-                  <div class="story truncated-text">
-                    <h4>{{story.title}}</h4>
-                    <div class="date">Posted on {{moment story.createdAt 'MMMM Do, YYYY'}}</div>
-                    <div class="text">{{{story.bodyHTML}}}</div>
-                    {{view 'fragment-link' fragment=story goTo="goTo" isLink=true}}
+                {{#each recentNews as |news|}}
+                  <div class="news truncated-text">
+                    <h4>{{news.title}}</h4>
+                    <div class="date">Posted on {{moment news.createdAt 'MMMM Do, YYYY'}}</div>
+                    <div class="text">{{{news.bodyHTML}}}</div>
+                    {{view 'fragment-link' fragment=news goTo="goTo" isLink=true}}
                   </div>
                 {{/each}}
               </div>

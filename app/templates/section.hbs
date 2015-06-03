@@ -30,6 +30,7 @@
               <div class="inner">
                 <div class="text">{{{fragment.bodyHTML}}}</div>
                 {{view 'fragment-link' fragment=fragment goTo="goTo" class="center-block btn-warning"}}
+                {{component fragment.customTemplate}}
               </div>
             </div>
           </div>

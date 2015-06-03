@@ -7,7 +7,7 @@ Entry = Model.extend
   body: DS.attr()
   slug: DS.attr()
 
-  # pages & sections
+  # pages, sections, fragments
   customTemplate: DS.attr()
 
   # sections

@@ -27,6 +27,9 @@
     position: absolute;
     bottom: -10px;
     right: 20px;
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   .top-nav, .bottom-nav {

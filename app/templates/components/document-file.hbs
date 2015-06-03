@@ -1,8 +1,8 @@
 <a href="{{document.file.url}}" target="_blank" class="col-sm-4 document-file">
   {{#if document.image}}
-    <img src="{{document.image.url}}"/>
+    <img src="{{document.image.url}}" alt="{{document.title}}" title="{{document.title}}"/>
   {{else}}
-    <img src="assets/images/document-placeholder.png"/>
+    <img src="assets/images/document-placeholder.png" alt="{{document.title}}" title="{{document.title}}"/>
   {{/if}}
   <div class="document-label">{{document.title}}</div>
 </a>

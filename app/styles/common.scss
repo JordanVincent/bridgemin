@@ -153,4 +153,5 @@ hr {
   &.ribbon-blue { @include ribbon-blue(); }
   &.ribbon-red { @include ribbon-red(); }
   &.ribbon-yellow { @include ribbon-yellow(); }
+  &.ribbon-white { opacity: .5; }
 }

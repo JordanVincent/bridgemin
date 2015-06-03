@@ -91,8 +91,8 @@ Entry = Model.extend
 
   ribbonClass: Ember.computed 'color',
     get: ->
-      return unless @get('color')
-      "ribbon-#{@get('color')}"
+      color = if @get('color') then @get('color') else 'white'
+      "ribbon-#{color}"
 
   hasLink: Ember.computed 'link',
     get: -> @get('link')

@@ -11,5 +11,6 @@ NewsletterForm = Ember.Component.extend
   method: "post"
 
   btnClass: 'btn-warning'
+  inputId: 'emailInput'
 
 `export default NewsletterForm;`

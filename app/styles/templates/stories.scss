@@ -1,29 +1,2 @@
 .stories {
-  .story {
-    border-top: 1px solid $gray-light;
-    padding-top: 20px;
-    margin-top: 20px;
-    &:first-child {
-      padding-top: 0;
-      border-top: 0;
-      margin-top: 0;
-    }
-    .inner {
-      img {
-        float: left;
-        width: 40%;
-        margin: 0 20px 20px 0;
-      }
-    }
-    h1 {
-      margin-bottom: 10px;
-    }
-    .date {
-      font-family: $headings-font-family;
-      font-style: italic;
-      color: $gray;
-      font-size: 1.2em;
-      margin-bottom: 20px;
-    }
-  }
 }

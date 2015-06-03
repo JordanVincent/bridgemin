@@ -24,6 +24,7 @@ CustomTemplateRoute = Ember.Mixin.create
       when 'events'
         @store.find('entry',
           content_type: @contentful.contentTypeFor('event')
+          order: '-fields.startDate'
         )
       when 'newsletter'
         @store.find('entry',

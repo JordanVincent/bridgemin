@@ -33,8 +33,10 @@ Entry = Model.extend
   # fragment, news, stories
   linkText: DS.attr()
 
-  # events
-  date: DS.attr('date')
+  # event
+  startDate: DS.attr('date')
+  endDate: DS.attr('date')
+  isAnnual: DS.attr()
 
   # newsletter
   file: DS.belongsTo('asset')

@@ -4,6 +4,8 @@ IndexRoute = Ember.Route.extend
   beforeModel: ->
     @set 'eventsPromise', @store.find 'entry',
       content_type: @contentful.contentTypeFor('event')
+      order: '-sys.createdAt'
+      limit: 1
     @set 'storiesPromise', @store.find 'entry',
       content_type: @contentful.contentTypeFor('story')
       order: '-sys.updatedAt'

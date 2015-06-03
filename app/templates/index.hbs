@@ -70,7 +70,7 @@
               {{background-image image=upcomingEvent.image}}
               <div class="inner">
                 <div class="truncated-text">
-                  <h4>{{upcomingEvent.title}}</h4>
+                  {{view 'entry-link' entry=upcomingEvent.link title=upcomingEvent.title goTo="goTo" tagName="h4"}}
                   <div class="date">{{moment upcomingEvent.date 'MMMM Do, YYYY'}}</div>
                   <div class="text">{{{upcomingEvent.bodyHTML}}}</div>
                   {{view 'fragment-link' fragment=upcomingEvent goTo="goTo" isLink=true}}
@@ -86,7 +86,7 @@
               {{background-image image=recentStory.image}}
               <div class="inner">
                 <div class="truncated-text">
-                  <h4>{{recentStory.title}}</h4>
+                  {{view 'entry-link' entry=recentStory.link title=recentStory.title goTo="goTo" tagName="h4"}}
                   <div class="text">{{{recentStory.bodyHTML}}}</div>
                   {{view 'fragment-link' fragment=recentStory goTo="goTo" isLink=true}}
                 </div>
@@ -101,7 +101,7 @@
               <div class="inner">
                 {{#each recentNews as |news|}}
                   <div class="news truncated-text">
-                    <h4>{{news.title}}</h4>
+                    {{view 'entry-link' entry=news.link title=news.title goTo="goTo" tagName="h4"}}
                     <div class="date">Posted on {{moment news.createdAt 'MMMM Do, YYYY'}}</div>
                     <div class="text">{{{news.bodyHTML}}}</div>
                     {{view 'fragment-link' fragment=news goTo="goTo" isLink=true}}

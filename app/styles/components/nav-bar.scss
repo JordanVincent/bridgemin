@@ -67,6 +67,7 @@
           display: inline-block;
           width: 50%;
           margin: 0 auto;
+          vertical-align: middle;
         }
 
         .ribbon {
@@ -75,8 +76,9 @@
 
         .description {
           margin-top: 15px;
-          font-size: 0.9em;
           text-align: center;
+          font-weight: normal;
+          font-family: $font-family-base;
         }
       }
     }

@@ -1,0 +1,28 @@
+<div class="equipment-types">
+  <h2>Availability Status</h2>
+
+  <div class="availability-status">
+    <p><span class="status-icon green"></span>Good Supply</p>
+    <p><span class="status-icon orange"></span>Fluctuating Supply</p>
+    <p><span class="status-icon red"></span>Very Few or Out of Stock</p>
+  </div>
+
+  <hr>
+
+  <h2>How to Get</h2>
+  <p><span class="method-icon request-form"></span>Request form required</p>
+  <p><span class="method-icon drop-in"></span>Drop-in Mobility Center to ask</p>
+  <p><span class="method-icon email"></span>Email <a href="mailto:equipment@bridgemin.org" target="_blank">equipment@bridgemin.org</a> to confirm availability</p>
+  <p><span class="method-icon call"></span>Call <a href="tel:425-885-1008" target="_blank">425-885-1008</a> to confirm availability</p>
+
+  <hr>
+
+  <h2>Item List</h2>
+  <div class="row equipment-types">
+    {{#each model as |equipmentType|}}
+      <div class="col-sm-4">
+        {{equipment-type equipmentType=equipmentType}}
+      </div>
+    {{/each}}
+  </div>
+</div>

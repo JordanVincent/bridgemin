@@ -14,8 +14,11 @@
 @import "components/site-header";
 @import "components/site-footer";
 @import "components/page-content";
+@import "components/equipment-type";
 
 @import "pages/index";
 @import "pages/section";
 @import "pages/section-index";
 @import "pages/donate";
+
+@import "templates/equipment-types";

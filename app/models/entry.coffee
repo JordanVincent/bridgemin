@@ -34,6 +34,11 @@ Entry = Model.extend
   # newsletter
   file: DS.belongsTo('asset')
 
+  # equipmentType
+  price: DS.attr()
+  availability: DS.attr()
+  pickUpMethods: DS.attr()
+
   # computed
 
   titleBreak: Ember.computed 'title',

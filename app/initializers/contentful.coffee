@@ -8,6 +8,7 @@ initializer = (container, application) ->
     modelForContentType: (contentTypeId) ->
       for model, id of config.contentful.models
         return model if contentTypeId is id
+      Ember.Logger.warn("Contentful model #{contentTypeId} not defined")
 
   application.register('contentful:main', contentful, {instantiate: false, singleton: true})
   application.inject('route', 'contentful', 'contentful:main')

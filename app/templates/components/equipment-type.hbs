@@ -1,0 +1,14 @@
+<div class="panel-heading">
+  {{equipmentType.title}}
+</div>
+<div class="panel-body">
+  {{background-image image=equipmentType.image}}
+  <div class="description">{{{equipmentType.bodyHTML}}}</div>
+  <p class="price">{{equipmentType.price}}</p>
+  <div class="icons">
+    <span class="status-icon {{availabilityColor}}"></span>
+    {{#each equipmentType.pickUpMethods as |pickUpMethod| }}<!--
+    --><span class="method-icon {{pickUpMethod}}" title="{{pickUpMethod}}"></span><!--
+    -->{{/each}}
+  </div>
+</div>

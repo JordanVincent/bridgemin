@@ -37,7 +37,8 @@ module.exports = function(environment) {
         fragment: '9paU2Wen5eowMKSWCkAGS',
         story: '3RtGrVRbYA6c8yUkY6AO8Y',
         newsletter: '4XfZYlNtTWgMwSesyskwgI',
-        report: '6scZoCOqnSOIuWgcQ6cS4u'
+        report: '6scZoCOqnSOIuWgcQ6cS4u',
+        equipmentType: 'Dr7K0jOQGyoqWw2Kkmyku'
       }
     }
   };
@@ -77,7 +78,8 @@ module.exports = function(environment) {
         fragment: '1AbspHBo6Mmm06soSWSQY0',
         story: 'SsZpd6c7iCQOQmmQCMkI4',
         newsletter: '2lXaQcSQfSO6M6gEEIEYOg',
-        report: '5ZUoeeSorSoukcAuee4ma0'
+        report: '5ZUoeeSorSoukcAuee4ma0',
+        equipmentType: '3ZNVz0wQikUuw6wYmm2cWy'
       }
     };
 

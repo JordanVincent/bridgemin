@@ -106,6 +106,10 @@ body {
   }
 }
 
+hr {
+  border-top-color: $gray-light;
+}
+
 .ribbon {
   @include ribbon();
   &.ribbon-blue { @include ribbon-blue(); }

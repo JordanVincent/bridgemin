@@ -1,0 +1,35 @@
+.equipment-types {
+  .availability-status {
+    p {
+      display: inline-block;
+      margin-right: 30px;
+    }
+  }
+
+  .status-icon, .method-icon {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  .status-icon {
+    border-radius: 100%;
+
+    &.red { background-color: #F75D1D; }
+    &.orange { background-color: #EAB600; }
+    &.green { background-color: #8EC63F; }
+  }
+
+  .method-icon {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &.email { background-image: url(#{$images-path}/send-email.png); }
+    &.drop-in { background-image: url(#{$images-path}/drop-in.png); }
+    &.request-form { background-image: url(#{$images-path}/request-form.png); }
+    &.call { background-image: url(#{$images-path}/call.png); }
+  }
+}

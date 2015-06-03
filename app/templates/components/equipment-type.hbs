@@ -4,11 +4,15 @@
 <div class="panel-body">
   {{background-image image=equipmentType.image}}
   <div class="description">{{{equipmentType.bodyHTML}}}</div>
-  <p class="price">{{equipmentType.price}}</p>
+  <p class="price">{{displayPrice}}</p>
   <div class="icons">
     <span class="status-icon {{availabilityColor}}"></span>
-    {{#each equipmentType.pickUpMethods as |pickUpMethod| }}<!--
-    --><span class="method-icon {{pickUpMethod}}" title="{{pickUpMethod}}"></span><!--
-    -->{{/each}}
+    {{#if onlyAvailability}}
+      {{availabilityLabel}}
+    {{else}}
+      {{#each equipmentType.pickUpMethods as |pickUpMethod| }}<!--
+      --><span class="method-icon {{pickUpMethod}}" title="{{pickUpMethod}}"></span><!--
+      -->{{/each}}
+    {{/if}}
   </div>
 </div>

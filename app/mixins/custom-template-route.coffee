@@ -43,6 +43,11 @@ CustomTemplateRoute = Ember.Mixin.create
         @store.find('entry',
           content_type: @contentful.contentTypeFor('equipmentType')
         )
+      when 'suggested-donations'
+        @store.find('entry',
+          content_type: @contentful.contentTypeFor('equipmentType')
+          'fields.show': true
+        )
       when 'staff-members'
         @store.find('entry',
           content_type: @contentful.contentTypeFor('staffMember')

@@ -1,0 +1,11 @@
+<div class="content-box suggested-donations">
+  <h1>Suggested Donation Amounts</h1>
+  <div class="row equipment-types">
+    {{#each model as |equipmentType|}}
+      <div class="col-sm-4 suggestion">
+        {{equipment-type equipmentType=equipmentType price=equipmentType.suggestedPrice onlyAvailability=true}}
+        {{link-to 'Donate' 'donate' (query-params amount=equipmentType.suggestedPrice) class="btn btn-primary"}}
+      </div>
+    {{/each}}
+  </div>
+</div>

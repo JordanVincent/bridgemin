@@ -139,6 +139,9 @@ body {
   border: 1px solid $gray-light;
   border-radius: 5px;
   margin: 20px 0;
+  & > *:first-child {
+    margin-top: 0;
+  }
 }
 
 hr {

@@ -52,8 +52,10 @@ Entry = Model.extend
 
   # equipmentType
   price: DS.attr()
+  suggestedPrice: DS.attr()
   availability: DS.attr()
   pickUpMethods: DS.attr()
+  show: DS.attr()
 
   # story
   type: DS.attr()

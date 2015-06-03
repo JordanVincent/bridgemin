@@ -1,7 +1,7 @@
 <div id="section-index">
   <div class="section-header">
     <div class="inner">
-      <img src={{model.image.url}} /><!--
+      {{#if model.image}}<img src={{model.image.url}} />{{/if}}<!--
       --><h1>{{model.title}}</h1>
     </div>
     <div class="ribbon {{model.ribbonClass}}"></div>

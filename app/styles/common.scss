@@ -5,7 +5,7 @@ body {
 
 .body {
   background-color: $gray-lighter;
-  padding: 50px 0;
+  padding: 30px 0;
 }
 
 .head {
@@ -23,7 +23,7 @@ body {
 
 .panel-box {
   border: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
   .panel-heading {
     padding: 15px 20px;
@@ -38,7 +38,7 @@ body {
   .panel-ribbon {
     background-color: $gray-dark;
     .ribbon {
-      height: 8px;
+      height: 18px;
     }
   }
   .panel-body {

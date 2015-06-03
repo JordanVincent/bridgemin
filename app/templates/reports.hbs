@@ -1,6 +1,8 @@
-<h2>Annual Reports</h2>
-<ul class="list-group">
-{{#each model as |report|}}
-  <li class="list-group-item"><a href="{{report.file.url}}" target="_blank">{{report.title}}</a></li>
-{{/each}}
-</ul>
+<div class="content-box">
+  <h2>Annual Reports</h2>
+  <ul class="list-group">
+  {{#each model as |report|}}
+    <li class="list-group-item"><a href="{{report.file.url}}" target="_blank">{{report.title}}</a></li>
+  {{/each}}
+  </ul>
+</div>

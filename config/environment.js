@@ -26,22 +26,22 @@ module.exports = function(environment) {
       'script-src': "'self' 'unsafe-inline' connect.facebook.net"
     },
 
-    contentful: {
+    ENV.contentful = {
       host: 'https://cdn.contentful.com',
-      spaceId: 'uuo3xbr82a31',
-      apiToken: '6ae1a33264be4718edafc309c3e071bd3fa4c890a0db6221197364438bbbd8bf',
+      spaceId: 'aau1la373lje',
+      apiToken: 'c8926c7fd57915ef72717f61993f2336777e27db10d1b7f75f96369174938b8a',
       models: {
-        section: '3Cdf29xH5YmCcCOQEgiqGE',
-        page: '3SWJKtyBoAc8s4m0iYuO64',
-        event: '7biTVxa9MciWC2m48WIuKO',
-        fragment: '9paU2Wen5eowMKSWCkAGS',
-        story: '3RtGrVRbYA6c8yUkY6AO8Y',
-        newsletter: '4XfZYlNtTWgMwSesyskwgI',
-        report: '6scZoCOqnSOIuWgcQ6cS4u',
-        equipmentType: 'Dr7K0jOQGyoqWw2Kkmyku',
-        news: 'D260RpyvqoaMEIcmYS8G2',
-        staffMember: '6I9pwAEN6owEYUSk6QCUyy',
-        infographic: '2chYpGGEMk8Iswik6UoYUw'
+        section: '52nbs0fDkcc2aCUAUkCAIC',
+        page: '3QYmCl09M4I6oOG20Kk6KY',
+        event: '7uJh6WNWBG2UEYqoqO6wmM',
+        fragment: '1AbspHBo6Mmm06soSWSQY0',
+        story: 'SsZpd6c7iCQOQmmQCMkI4',
+        newsletter: '2lXaQcSQfSO6M6gEEIEYOg',
+        report: '5ZUoeeSorSoukcAuee4ma0',
+        equipmentType: '3ZNVz0wQikUuw6wYmm2cWy',
+        news: '46UfMAO8HmwoCyI6waWc8A',
+        staffMember: '5fCOPDjxFKE2gCKK684gUw',
+        infographic: '6Q75sUxRcsEWgqc0gOWcY8'
       }
     }
   };
@@ -69,25 +69,6 @@ module.exports = function(environment) {
   if (environment === 'production') {
     ENV.baseURL = '/redesign';
     ENV.locationType = 'hash';
-
-    ENV.contentful = {
-      host: 'https://cdn.contentful.com',
-      spaceId: 'aau1la373lje',
-      apiToken: 'c8926c7fd57915ef72717f61993f2336777e27db10d1b7f75f96369174938b8a',
-      models: {
-        section: '52nbs0fDkcc2aCUAUkCAIC',
-        page: '3QYmCl09M4I6oOG20Kk6KY',
-        event: '7uJh6WNWBG2UEYqoqO6wmM',
-        fragment: '1AbspHBo6Mmm06soSWSQY0',
-        story: 'SsZpd6c7iCQOQmmQCMkI4',
-        newsletter: '2lXaQcSQfSO6M6gEEIEYOg',
-        report: '5ZUoeeSorSoukcAuee4ma0',
-        equipmentType: '3ZNVz0wQikUuw6wYmm2cWy',
-        news: '46UfMAO8HmwoCyI6waWc8A',
-        staffMember: '5fCOPDjxFKE2gCKK684gUw',
-        infographic: '6Q75sUxRcsEWgqc0gOWcY8'
-      }
-    };
 
     ENV.googleAnalytics = {
       webPropertyId: 'UA-15988821-1'

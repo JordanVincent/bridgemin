@@ -37,6 +37,7 @@ Entry = Model.extend
   startDate: DS.attr('date')
   endDate: DS.attr('date')
   isAnnual: DS.attr()
+  location: DS.attr()
 
   # newsletter
   file: DS.belongsTo('asset')
@@ -88,6 +89,9 @@ Entry = Model.extend
 
   fact3DescriptionHTML: Ember.computed 'fact3Description',
     get: -> @markdownToHTML @get('fact3Description')
+
+  locationHTML: Ember.computed 'location',
+    get: -> @markdownToHTML @get('location')
 
   ribbonClass: Ember.computed 'color',
     get: ->

@@ -1,14 +1,7 @@
 <div class="content-box">
   <h1>Annual Events</h1>
   {{#each annualEvents as |event|}}
-    <div class="story">
-      <h2>{{event.title}}</h2>
-      <div class="date">{{moment event.startDate 'MMMM Do, YYYY'}}</div>
-      <div class="inner clearfix">
-        <img src="{{event.image.url}}"/>
-        {{{event.bodyHTML}}}
-      </div>
-    </div>
+    {{event-card event=event}}
   {{else}}
     <em>No annual events</em>
   {{/each}}
@@ -17,14 +10,7 @@
 <div class="content-box">
   <h1>Upcoming Events</h1>
   {{#each upcomingEvents as |event|}}
-    <div class="story">
-      <h2>{{event.title}}</h2>
-      <div class="date">{{moment event.startDate 'MMMM Do, YYYY [from] ha [to] '}}{{moment event.endDate 'ha'}}</div>
-      <div class="inner clearfix">
-        <img src="{{event.image.url}}"/>
-        {{{event.bodyHTML}}}
-      </div>
-    </div>
+    {{event-card event=event}}
   {{else}}
     <em>No upcoming events</em>
   {{/each}}
@@ -33,14 +19,7 @@
 <div class="content-box">
   <h1>Past Events</h1>
   {{#each pastEvents as |event|}}
-    <div class="story">
-      <h2>{{event.title}}</h2>
-      <div class="date">{{moment event.startDate 'MMMM Do, YYYY [from] ha [to] '}}{{moment event.endDate 'ha'}}</div>
-      <div class="inner clearfix">
-        <img src="{{event.image.url}}"/>
-        {{{event.bodyHTML}}}
-      </div>
-    </div>
+    {{event-card event=event}}
   {{else}}
     <em>No past events</em>
   {{/each}}

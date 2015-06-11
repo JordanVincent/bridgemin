@@ -1,0 +1,9 @@
+<div class="story event-card">
+  <h2>{{event.title}}</h2>
+  <div class="date">{{moment event.startDate 'MMMM Do, YYYY [from] ha [to] '}}{{moment event.endDate 'ha'}}</div>
+  <div class="inner clearfix">
+    <img src="{{event.image.url}}"/>
+    {{{event.bodyHTML}}}
+    <div class="location">Address:</div> {{event.locationHTML}}
+  </div>
+</div>

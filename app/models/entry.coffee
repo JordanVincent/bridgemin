@@ -39,8 +39,9 @@ Entry = Model.extend
   isAnnual: DS.attr()
   location: DS.attr()
 
-  # newsletter
+  # newsletter & report
   file: DS.belongsTo('asset')
+  date: DS.attr('date')
 
   # infographic
   orientation: DS.attr()

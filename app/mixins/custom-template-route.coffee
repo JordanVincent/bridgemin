@@ -29,10 +29,12 @@ CustomTemplateRoute = Ember.Mixin.create
       when 'newsletter'
         @store.find('entry',
           content_type: @contentful.contentTypeFor('newsletter')
+          order: '-fields.date'
         )
       when 'reports'
         @store.find('entry',
           content_type: @contentful.contentTypeFor('report')
+          order: '-fields.date'
         )
       when 'stories'
         @store.find('entry',

@@ -53,6 +53,7 @@ CustomTemplateRoute = Ember.Mixin.create
       when 'staff-members'
         @store.find('entry',
           content_type: @contentful.contentTypeFor('staffMember')
+          order: 'fields.position'
         )
 
   renderBreadcrumb: ->

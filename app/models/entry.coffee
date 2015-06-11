@@ -13,13 +13,13 @@ Entry = Model.extend
   # sections
   pages: DS.hasMany('entry', {async: true, inverse: null})
   fragments: DS.hasMany('entry', {async: true, inverse: null})
-  position: DS.attr()
   icon: DS.belongsTo('asset')
   isProgram: DS.attr()
   color: DS.attr()
 
   # sections, staffMember
   description: DS.attr()
+  position: DS.attr()
 
   # pages
   section: DS.belongsTo('entry', {async: true, inverse: null})
